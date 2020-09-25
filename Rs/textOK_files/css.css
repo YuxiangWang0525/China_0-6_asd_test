@@ -1,0 +1,91 @@
+﻿body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.border
+{
+    border: 1px solid #FFDEAD;
+}
+.border_1
+{
+    border: 1px solid #FFAF6F;
+}
+.admin_input
+{
+    border:#999 1px solid;
+	height:20px;
+	padding-left:1px;
+}
+.font_class
+{
+    font-family: 宋体, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333300;
+    line-height: 20px;    
+}
+.font_baizi
+{
+    font-family: 宋体, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333300;
+}
+.pageOn{ line-height:20px; border:1px solid #D1D0CE; background:#EEF2F5; padding:2px 6px; color:#30627B; cursor:hand;font-size:12px;}
+.pageOn_A{ line-height:20px; border:1px solid #F5F5F5; background:#FFDAB9 ; padding:2px 6px; color:#cccccc; font-size:12px;}
+.pageDown{ line-height:20px; border:1px solid #0173AF ; background:#0173AF; padding:2px 6px; color:#ffffff;cursor:hand;}
+.terms {
+	width:90%;
+	height:100px;
+	border:1px solid #ccc;
+	background:#f2f2f2;
+	font:normal 11px/15px arial;
+	padding:6px;
+	color:#333;
+}
+.font_div { position:absolute; top:60%; left:55%; width:440px; height:450px;filter: alpha(opacity=100); opacity: 0.7;}
+
+
+#colse_div {
+    background:#000000;
+	border: 2px solid #1A1A19;/*设置显示层外边框宽和颜色*/
+	margin-top:2px;
+	margin-left:2px;
+	float:left;
+	overflow:hidden;
+	position:absolute;
+	left:27%;/*设置显示层初始水平位置*/
+	top:17%;/*设置显示层初始垂直位置*/
+	cursor:move;
+	float:left;/*filter:alpha(opacity=50);*/
+	z-index: 10;
+	display:none;
+	
+}
+
+.heizi
+{
+    font-family: 宋体, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    
+} 
+.hongzi
+{
+    font-family: 宋体, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FF0000;
+    text-decoration: none;
+    
+} 
+.lanzi
+{
+    font-family: 宋体, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #0B919A;
+    text-decoration: none;
+    
+} 

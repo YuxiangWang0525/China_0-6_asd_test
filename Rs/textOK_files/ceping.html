@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://www.cn0-6.com/zl_test/test_online.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <script type="text/javascript" src="./test_ajax.js.下载"></script>
+    <script type="text/javascript" src="./tongji_code.js.下载"></script>
+    <script type="text/javascript" src="./WdatePicker.js.下载"></script><link href="./WdatePicker.css" rel="stylesheet" type="text/css">
+    <title>
+	成长测评
+</title><meta name="KeyWords" contect=""><meta name="Description" contect=""><link href="./css.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+*{margin:0;padding:0;list-style:none;}
+  a{text-decoration:none;}
+  a:hover{text-decoration:underline;}
+/*自动滚动tab标签*/ 
+.News_tab{width:650px;height:100%;}
+.News_tab_title_bg{width:650px;background:url();}
+.News_tab_title{width:680px;height:41px;font:600 12px "宋体";line-height:41px;}/*导航总宽度*/
+.News_tab_title li{display:inline;float:left;background:url(images/luoji_top_2.gif);margin-right:1px;text-align:center;}
+.News_tab_title li a{width:96px;height:41px;display:inline-block;color:#000;}/*导航宽度*/
+.News_tab_title li a.tabactive{color:#fff;background:url(images/yuyan_top_2.gif);}
+.News_tab_content{width:680px;border:1px solid #e7c391;border-top:none;background-color:#FDB4B8; height:100%;}
+.tab_content{ height:100%;}
+.tab_content li{border-bottom:1px dotted #C0C0C0;line-height:28px;background:url() no-repeat left;padding-left:3px;list-style:none;}
+.tab_content li a{display:inline-block;width:650px;font-size:12px;color:#000;}
+.tab_content li a:hover{color:#f00;text-decoration:underline;}
+.tab_content li a:active{color:#f00;}
+.tab_content li:hover{background-color:#F5F5F5;}
+.tab_content li span{text-align:center;font-size:12px;color:#666;}
+.tab_content ul{margin:0 5px;padding:10px 0 0 0;}
+.FONT{height:100%;}
+.font_right {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #009900;
+	text-decoration: none;
+	 line-height: 20px;   
+}
+
+  </style>
+<!--关闭建议-->
+<script type="text/javascript">
+<!-- Hide
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+//-->强制不报错
+var xmlHttp;
+function createXMLHttpRequest(){if(window.ActiveXObject){xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");}else if(window.XMLHttpRequest){xmlHttp=new XMLHttpRequest();}}
+function is_user()
+{
+createXMLHttpRequest();xmlHttp.onreadystatechange=loadUser;xmlHttp.open("GET","/System_Ajax/UserLogin.aspx?Med=",true);xmlHttp.setRequestHeader('Cache-Control','no-cache');xmlHttp.send(null);document.getElementById('save_true').disabled='disabled';
+}
+function loadUser(){if(xmlHttp.readyState==4){
+if(xmlHttp.status==200){
+document.getElementById('save_true').disabled='';
+var result=xmlHttp.responseText;
+
+switch(result)
+{ 
+case "0": 
+OpenDiv();
+return false;
+break; 
+default: 
+document.getElementById("Button1").click();
+break;}}
+}
+}
+
+//tishi
+function tishi_mon()
+{
+sAlert('您的宝宝目前的年龄在此范围内属于偏小年龄，您可以进行本次测试，如果测评结果不理想，家长也不要着急,因为所得测评结果以及建议,是取同龄儿童、大众标准，是作为家长在平时教育宝宝的一个辅助教材和参考,最重要的还是要靠家长平时多和宝宝多沟通交流、做游戏，以促进宝宝的发育，并进行正确的引导和教育。');
+}
+
+</script>
+
+</head>
+<body marginwidth="0" marginheight="0">
+<center>
+    <form name="form1" method="post" action="http://www.cn0-6.com/zl_test/test_online.aspx" id="form1" onsubmit="yanzheng();">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE3MjU3NzI4Nw9kFgICAw9kFggCAQ8PFgIeBFRleHQFMzxzY3JpcHQgbGFuZ3VhZ2U9J2phdmFzY3JpcHQnPnRpc2hpX21vbigpOzwvc2NyaXB0PmRkAgQPDxYCHgdWaXNpYmxlaGQWFgIBDxYCHgV2YWx1ZQUKMjAxOC0wOS0xMmQCBg88KwAJAQAPFgQeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgZkFgxmD2QWCGYPFQIBMf4B6LS06IS46LCx77yI5aS05Y+R44CB55yJ5q+b44CB55y8552b44CB6by75a2Q44CB5Zi05ZSH44CB6ICz5py177yJ77yM6LS05a+55Yeg56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WBB8ABSA256eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIB4HQ2hlY2tlZGcWAh4Hb25jbGljawUZZm9udF9zaG93KCdhJyw0NTUsJzbnp40nKWRkZAIDDxAPFgIfAAUgNeenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRlmb250X3Nob3coJ2InLDQ1NSwnNeenjScpZGRkAgUPEA8WAh8ABSQz56eN5Lul5LiLICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBR9mb250X3Nob3coJ2MnLDQ1NSwnM+enjeS7peS4iycpZGRkAgEPZBYIZg8VAgEy3gHlraborqTok53oibLlt7LorqTor4blh6Dnp43popzoibIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABS4456eN77yI5YyF5ous5rex5rWF6Imy77yJICAgICAgICAgICAgICAgICAgICAgFgIfBgUuZm9udF9zaG93KCdhJyw0NTQsJzjnp43vvIjljIXmi6zmt7HmtYXoibLvvIknKWRkZAIDDxAPFgQfAAUgN+enjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBRlmb250X3Nob3coJ2InLDQ1NCwnN+enjScpZGRkAgUPEA8WAh8ABSQ156eN5Lul5LiLICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBR9mb250X3Nob3coJ2MnLDQ1NCwnNeenjeS7peS4iycpZGRkAgIPZBYIZg8VAgEziALnp6/mnKjmkK3pl6jmpbzlkozph5HlrZfloZTog73mkK3kuIoz5Z2X5LiLMuWdl+eahOmXqOalvOS4jjPlsYLph5HlrZfloZTjgIE05bGC6YeR5a2X5aGU5Lit55qE5Yeg56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSAz56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFGWZvbnRfc2hvdygnYScsNDUzLCcz56eNJylkZGQCAw8QDxYEHwAFIDLnp40gICAgICAgICAgICAgICAgICAgICAgICAgICAgHwVnFgIfBgUZZm9udF9zaG93KCdiJyw0NTMsJzLnp40nKWRkZAIFDxAPFgIfAAUgMeenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRlmb250X3Nob3coJ2MnLDQ1MywnMeenjScpZGRkAgMPZBYIZg8VAgE09gHkuIrntKflj4rmi6flvIDonrrkuJ3kvb/nlKjmiYvjgIHonrrkuJ3plKXjgIHmub/luIPkuK3nmoTlh6Dnp43mlrnms5UgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSAz56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFGWZvbnRfc2hvdygnYScsNDUyLCcz56eNJylkZGQCAw8QDxYCHwAFIDLnp40gICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUZZm9udF9zaG93KCdiJyw0NTIsJzLnp40nKWRkZAIFDxAPFgQfAAUgMeenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBRlmb250X3Nob3coJ2MnLDQ1MiwnMeenjScpZGRkAgQPZBYIZg8VAgE10AHlrablhpnmlbDlrZcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgNOS4qiAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRlmb250X3Nob3coJ2EnLDQ1MSwnNOS4qicpZGRkAgMPEA8WAh8ABSAz5LiqICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFGWZvbnRfc2hvdygnYicsNDUxLCcz5LiqJylkZGQCBQ8QDxYEHwAFIDHkuKogICAgICAgICAgICAgICAgICAgICAgICAgICAgHwVnFgIfBgUZZm9udF9zaG93KCdjJyw0NTEsJzHkuKonKWRkZAIFD2QWCGYPFQIBNpQC5o6S5pWw5a2X5Lya55So5Yeg56eN5pa55rOV5o6S5pWw5a2X77yIMe+9njEw77yM5LuO5Lu75L2V5LiA5Liq5pWw6LW35o6SMuS4quOAgeaOkjPkuKrjgIHmjpI05Liq44CB5o6SNeS4qui/nue7reeahOaVsO+8iSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgNOenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRlmb250X3Nob3coJ2EnLDQ1MCwnNOenjScpZGRkAgMPEA8WAh8ABSAz56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFGWZvbnRfc2hvdygnYicsNDUwLCcz56eNJylkZGQCBQ8QDxYEHwAFIDHnp40gICAgICAgICAgICAgICAgICAgICAgICAgICAgHwVnFgIfBgUZZm9udF9zaG93KCdjJyw0NTAsJzHnp40nKWRkZAIIDw8WAh8BaGRkAgoPPCsACQEADxYEHwMWAB8EAgVkFgpmD2QWCGYPFQIBMdgB5a6d5a6d5Lya5LuOMeaVsOWIsDEw5ZCX77yfICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgQfAAUs6IO977yM6ICM5LiU6L6D5rWB5YipICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBSpmb250X3Nob3coJ2EnLDQ2MCwn6IO977yM6ICM5LiU6L6D5rWB5YipJylkZGQCAw8QDxYCHwAFLOiDve+8jOS4jeaYr+W+iOa1geWIqSAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUqZm9udF9zaG93KCdiJyw0NjAsJ+iDve+8jOS4jeaYr+W+iOa1geWIqScpZGRkAgUPEA8WAh8ABSLkuI3og70gICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUbZm9udF9zaG93KCdjJyw0NjAsJ+S4jeiDvScpZGRkAgEPZBYIZg8VAgEygALlrp3lrp3llpzmrKLpl67pl67popjlkJfvvJ/kvovlpoLvvJrpl67igJzov5nmmK/ku4DkuYjvvJ/igJ3jgIHigJzpgqPmmK/ku4DkuYjigJ3vvJ8gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUk57uP5bi46ZeuICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUeZm9udF9zaG93KCdhJyw0NTksJ+e7j+W4uOmXricpZGRkAgMPEA8WBB8ABSTlgbblsJTpl64gICAgICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBR5mb250X3Nob3coJ2InLDQ1OSwn5YG25bCU6ZeuJylkZGQCBQ8QDxYCHwAFJuS7juadpeS4jemXriAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUhZm9udF9zaG93KCdjJyw0NTksJ+S7juadpeS4jemXricpZGRkAgIPZBYIZg8VAgEz1AHlrabllLHlhL/nq6XmrYzmm7IgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFIuWUsTPpppYgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRxmb250X3Nob3coJ2EnLDQ1OCwn5ZSxM+mmlicpZGRkAgMPEA8WBB8ABSLllLEy6aaWICAgICAgICAgICAgICAgICAgICAgICAgICAgHwVnFgIfBgUcZm9udF9zaG93KCdiJyw0NTgsJ+WUsTLpppYnKWRkZAIFDxAPFgIfAAUo5ZSxMemmluaIluS4jeS8miAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFJWZvbnRfc2hvdygnYycsNDU4LCfllLEx6aaW5oiW5LiN5LyaJylkZGQCAw9kFghmDxUCATTmAeivtOWHuuiBjOS4muensOWRvOiDveivtOWHuuWHoOenjeiBjOS4muensOWRvCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgNuenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRlmb250X3Nob3coJ2EnLDQ1NywnNuenjScpZGRkAgMPEA8WBB8ABSA156eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIB8FZxYCHwYFGWZvbnRfc2hvdygnYicsNDU3LCc156eNJylkZGQCBQ8QDxYCHwAFJOWwkeS6jjTnp40gICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFH2ZvbnRfc2hvdygnYycsNDU3LCflsJHkuo4056eNJylkZGQCBA9kFghmDxUCATXgAemXruKAnOS9oOKAneaXtu+8jOeUqOKAnOaIkeKAneWbnuetlCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgQfAAUu56uL5Y2z55So4oCc5oiR4oCd5Zue562UICAgICAgICAgICAgICAgICAgICAgIB8FZxYCHwYFLWZvbnRfc2hvdygnYScsNDU2LCfnq4vljbPnlKjigJzmiJHigJ3lm57nrZQnKWRkZAIDDxAPFgIfAAUw5oOz5ZCO5Lya55So4oCc5oiR4oCd5Zue562UICAgICAgICAgICAgICAgICAgICAgFgIfBgUwZm9udF9zaG93KCdiJyw0NTYsJ+aDs+WQjuS8mueUqOKAnOaIkeKAneWbnuetlCcpZGRkAgUPEA8WAh8ABTDkuI3kvJrvvIznlKjmiYvmi43og7jooajnpLogICAgICAgICAgICAgICAgICAgICAWAh8GBTBmb250X3Nob3coJ2MnLDQ1Niwn5LiN5Lya77yM55So5omL5ouN6IO46KGo56S6JylkZGQCDA8PFgIfAWhkZAIODzwrAAkBAA8WBB8DFgAfBAIDZBYGZg9kFghmDxUCATHiAeeUu+WchuWciOiDveeUu+WHuuWHoOS4quWwgeWPo+eahOWchuW9oiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSA05LiqICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFGWZvbnRfc2hvdygnYScsNDYzLCc05LiqJylkZGQCAw8QDxYEHwAFIDPkuKogICAgICAgICAgICAgICAgICAgICAgICAgICAgHwVnFgIfBgUZZm9udF9zaG93KCdiJyw0NjMsJzPkuKonKWRkZAIFDxAPFgIfAAUgMS0y5LiqICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRtmb250X3Nob3coJ2MnLDQ2MywnMS0y5LiqJylkZGQCAQ9kFghmDxUCATLiAeaOpeeQg+aOpeS9j+i3neemu+WHoOexs+i/nOaKm+adpeeahOeQgyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSAy57GzICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFGWZvbnRfc2hvdygnYScsNDYyLCcy57GzJylkZGQCAw8QDxYEHwAFIDEuNeexsyAgICAgICAgICAgICAgICAgICAgICAgICAgHwVnFgIfBgUbZm9udF9zaG93KCdiJyw0NjIsJzEuNeexsycpZGRkAgUPEA8WAh8ABSIwLjXnsbMtMeexsyAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUgZm9udF9zaG93KCdjJyw0NjIsJzAuNeexsy0x57GzJylkZGQCAg9kFghmDxUCATOKAui1sOW5s+ihoeacqOiDveWBmuWHoOenjeWKqOS9nO+8iOWktOS4iuacieS5pu+8jOWPjOaJi+aPkOevru+8jOWPjOaJi+aLv+mTg+mTm++8jOWBmuadguaKgOWKqOS9nO+8iSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgM+enjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRlmb250X3Nob3coJ2EnLDQ2MSwnM+enjScpZGRkAgMPEA8WBB8ABSAy56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIB8FZxYCHwYFGWZvbnRfc2hvdygnYicsNDYxLCcy56eNJylkZGQCBQ8QDxYCHwAFIDAtMeenjSAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUbZm9udF9zaG93KCdjJyw0NjEsJzAtMeenjScpZGRkAhAPDxYCHwFoZGQCEg88KwAJAQAPFgQfAxYAHwQCBGQWCGYPZBYIZg8VAgExgALnu5nlrp3lrp3orrLlrozkuIDkuKrmlYXkuovlkI7vvIzlrp3lrp3og73kuI3og73orrDkvY/mlYXkuovkuK3kuIDkuKrop5LoibLnmoTlkI3lrZcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUg6IO9ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRhmb250X3Nob3coJ2EnLDQ2Nywn6IO9JylkZGQCAw8QDxYEHwAFIuWBtuWwlCAgICAgICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBRtmb250X3Nob3coJ2InLDQ2Nywn5YG25bCUJylkZGQCBQ8QDxYCHwAFIuS4jeiDvSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRtmb250X3Nob3coJ2MnLDQ2Nywn5LiN6IO9JylkZGQCAQ9kFghmDxUCATKsAuWmiOWmiOWBh+ijheaKiuaJi+aMh+WIkuegtO+8jOWvueWuneWuneivtO+8muWmiOWmiOeahOaJi+egtOS6hu+8jOS4jeiDveayvuawtOOAguWuneWuneeOsOWcqOmVv+Wkp+S6hu+8jOimgeW4ruWmiOWmiO+8jOmlreWJjeWPr+S7peiHquW3seWOu+a0l+aJi+WQlyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFKOS8muiHquW3sea0l+aJiyAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBSRmb250X3Nob3coJ2EnLDQ2Niwn5Lya6Ieq5bex5rSX5omLJylkZGQCAw8QDxYEHwAFIuWBtuWwlCAgICAgICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBRtmb250X3Nob3coJ2InLDQ2Niwn5YG25bCUJylkZGQCBQ8QDxYCHwAFIuS4jeS8miAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRtmb250X3Nob3coJ2MnLDQ2Niwn5LiN5LyaJylkZGQCAg9kFghmDxUCATOcAuWuneWuneiDveiHquihjOWvueKAnCAqKiDlnKjlk6rph4zvvJ/igJ3ov5npl67popjkvZzlh7rmraPnoa7nmoTlj43lupTvvIjljbPliKnnlKjop4bop4nmkJzntKLmiL/pl7TvvIzlubbmjIflh7rnianku7bnmoTkvY3nva7vvIkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUs6IO95bm25LiU5q2j56Gu5om+5Ye6ICAgICAgICAgICAgICAgICAgICAgICAWAh8GBSpmb250X3Nob3coJ2EnLDQ2NSwn6IO95bm25LiU5q2j56Gu5om+5Ye6JylkZGQCAw8QDxYEHwAFMOiDveaJvuWHuu+8jOaXtumXtOmVv+S4gOS6myAgICAgICAgICAgICAgICAgICAgIB8FZxYCHwYFMGZvbnRfc2hvdygnYicsNDY1LCfog73mib7lh7rvvIzml7bpl7Tplb/kuIDkupsnKWRkZAIFDxAPFgIfAAUq5rKh5pyJ5Lu75L2V5Y+N5bqUICAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUnZm9udF9zaG93KCdjJyw0NjUsJ+ayoeacieS7u+S9leWPjeW6lCcpZGRkAgMPZBYIZg8VAgE0/gHlrp3lrp3lr7nigJzlgZzvvIjlgZzmraLvvInigJ3lkozigJzooYzvvIjotbDvvInigJ3nmoTmjIfku6TkvZzlh7rmraPnoa7nmoTlj43lupQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYEHwAFMOiDveWkn+ato+ehrueahOS9nOWHuuihjOS4uiAgICAgICAgICAgICAgICAgICAgIB8FZxYCHwYFMGZvbnRfc2hvdygnYScsNDY0LCfog73lpJ/mraPnoa7nmoTkvZzlh7rooYzkuLonKWRkZAIDDxAPFgIfAAUo5YG25bCU5Lya5Ye66ZSZICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFJGZvbnRfc2hvdygnYicsNDY0LCflgbblsJTkvJrlh7rplJknKWRkZAIFDxAPFgIfAAUi5LiN6IO9ICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFG2ZvbnRfc2hvdygnYycsNDY0LCfkuI3og70nKWRkZAIUDw8WAh8BaGRkAhYPPCsACQEADxYEHwMWAB8EAgVkFgpmD2QWCGYPFQIBMYoC5a6d5a6d5pyJ5LiA5a6a55qE5piv6Z2e6KeC5b+15ZCX77yf5L6L5aaC77ya5a6d5a6d55+l6YGT4oCc5omT5Lq65LiN5a+54oCd44CB4oCc5ZC15p625LiN5aW94oCd562JICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSDmnIkgICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFGGZvbnRfc2hvdygnYScsNDcyLCfmnIknKWRkZAIDDxAPFgQfAAUs5pyJ77yM5L2G5q+U6L6D5qih57OKICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBSpmb250X3Nob3coJ2InLDQ3Miwn5pyJ77yM5L2G5q+U6L6D5qih57OKJylkZGQCBQ8QDxYCHwAFIuayoeaciSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRtmb250X3Nob3coJ2MnLDQ3Miwn5rKh5pyJJylkZGQCAQ9kFghmDxUCATKIAuWuneWuneacieS4gOWumueahOiHqueQhuiDveWKm+WQl++8n+avlOWmguS8muiHquW3seWQg+mlre+8jOiHquW3sea0l+iEuO+8jOiHquW3seiEseiho+acjeetieOAgiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFLuWfuuacrOWPr+S7peiHquW3seino+WGsyAgICAgICAgICAgICAgICAgICAgICAWAh8GBS1mb250X3Nob3coJ2EnLDQ3MSwn5Z+65pys5Y+v5Lul6Ieq5bex6Kej5YazJylkZGQCAw8QDxYEHwAFMOWPr+S7peWBmuWIsOWfuuS4reS4gOS4pOagtyAgICAgICAgICAgICAgICAgICAgIB8FZxYCHwYFMGZvbnRfc2hvdygnYicsNDcxLCflj6/ku6XlgZrliLDln7rkuK3kuIDkuKTmoLcnKWRkZAIFDxAPFgIfAAUi5LiN6IO9ICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFG2ZvbnRfc2hvdygnYycsNDcxLCfkuI3og70nKWRkZAICD2QWCGYPFQIBM/YB5a6d5a6d5Zac5qyi6Lef5Zyo5q+U6Ieq5bex5bm06b6E5aSn55qE5bCP5pyL5Y+L5ZCO6Z2i6LWw552A546p5ZCX77yfICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUs5Zac5qyi77yM6ICM5LiU57uP5bi4ICAgICAgICAgICAgICAgICAgICAgICAWAh8GBSpmb250X3Nob3coJ2EnLDQ3MCwn5Zac5qyi77yM6ICM5LiU57uP5bi4JylkZGQCAw8QDxYCHwAFIuWBtuWwlCAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8GBRtmb250X3Nob3coJ2InLDQ3MCwn5YG25bCUJylkZGQCBQ8QDxYEHwAFJOS4jeWWnOasoiAgICAgICAgICAgICAgICAgICAgICAgICAgIB8FZxYCHwYFHmZvbnRfc2hvdygnYycsNDcwLCfkuI3llpzmrKInKWRkZAIDD2QWCGYPFQIBNNAB5Y+W5oql5Y+W5aW2ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYEHwAFKOeLrOiHquS8muWBmjLnp40gICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBSVmb250X3Nob3coJ2EnLDQ2OSwn54us6Ieq5Lya5YGaMuenjScpZGRkAgMPEA8WAh8ABSjni6zoh6rkvJrlgZox56eNICAgICAgICAgICAgICAgICAgICAgICAgFgIfBgUlZm9udF9zaG93KCdiJyw0NjksJ+eLrOiHquS8muWBmjHnp40nKWRkZAIFDxAPFgIfAAUs5aSn5Lq655uR5oqk5LiL5pWi5YGaICAgICAgICAgICAgICAgICAgICAgICAWAh8GBSpmb250X3Nob3coJ2MnLDQ2OSwn5aSn5Lq655uR5oqk5LiL5pWi5YGaJylkZGQCBA9kFghmDxUCATXYAeS4gOe9keS4jeaNnumxvOa4uOaIj+aXtiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFJOWuiOinhOWImSAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFHmZvbnRfc2hvdygnYScsNDY4LCflrojop4TliJknKWRkZAIDDxAPFgQfAAUmQuS6ieedgOWFpee9kSAgICAgICAgICAgICAgICAgICAgICAgICAfBWcWAh8GBSJmb250X3Nob3coJ2InLDQ2OCwnQuS6ieedgOWFpee9kScpZGRkAgUPEA8WAh8ABSzkuI3lhaXpmJ/miJbpmo/lpKfmtYEgICAgICAgICAgICAgICAgICAgICAgIBYCHwYFKmZvbnRfc2hvdygnYycsNDY4LCfkuI3lhaXpmJ/miJbpmo/lpKfmtYEnKWRkZAIYDw8WAh8BaGRkAgYPDxYCHwFoZGQCCA8PFgIfAWdkFh5mDw8WAh8ABQzpgLvovpHog73liptkZAIBDw8WAh8ABY8D5L6d54Wn5pys5qyh5rWL6K+V57uT5p6c55yL77yM5oKo55qE5a2p5a2Q5Y+v6IO95ZKM5ZCM6b6E5a2p5a2Q55u45q+U5aSE5LqO56iN5b6u5YGP5L2O5rC05bmz77yM5a626ZW/5LiN6KaB5ouF5b+D77yM5oiR5Lus55qE5rWL6K+V6aKY55uu5Z2H6YeH55So5pmu6YGN5YS/56ul55qE5aSn5LyX5qCH5YeG77yM5q+P5Liq5a2p5a2Q5Zug5Liq5L2T5beu5byC5ZKM5YW25LuW5Zug57Sg55qE5LiN5ZCM5Y+v6IO95Lya5LiO5pys5qyh5rWL6K+E5pyJ5Ye65YWl44CC5Y+q6KaB5a626ZW/5bmz5pe25LiO5a2p5a2Q5aSa6K+06K+d77yM5aSa54ix5oqa5a2p5a2Q77yM57uT5ZCI5oiR5Lus55qE5LiT5a625bu66K6u77yM6L+Z5qC36IO95b6I5aW955qE5L+D6L+b5a2p5a2Q55qE5YGl5bq35oiQ6ZW/44CCZGQCAg8PFgIfAAXBAuWutumVv+S7u+aEj+WPluWHuuS4gOenjeminOiJsueahOWwj+eQg++8jOiuqeWtqeWtkOWPluminOiJsuebuOWQjOeahOWwj+eQg+i/m+ihjOmFjeWvueOAguWmguaenOWSjOWIq+eahOWwj+aci+WPi+S4gOi1t+eOqe+8jOi/mOWPr+S7pei/m+ihjOeci+iwgeaLv+eahOWvueWSjOW/q+eahOavlOi1m+OAguaPkOekuu+8muS5n+WPr+S7peWHhuWkh+S4gOS6m+minOiJsuebuOWQjOS9huW9oueKtuS4jeWQjOeahOeJqeS9k++8jOiuqeWtqeWtkOWIhuexu++8jOmFjeWvue+8jOS7peiuree7g+WtqeWtkOWvueWbvuW9oueahOinguWvn+WSjOWIpOaWreiDveWKm+OAgmRkAgMPDxYCHwAFDOivreiogOiDveWKm2RkAgQPDxYCHwAFtwHmgqjnmoTlrp3lrp3lnKjlkIzpvoTlrp3lrp3kuK3lt7LlpITkuo7mraPluLjmsLTlubPlj5HogrLvvIzlrrbplb/lupTnu6fnu63liqrlipvvvIzlkIzml7bopoHkv53mjIHkuI7lrp3lrp3nmoTmsp/pgJrvvIznu5PlkIjmiJHku6znmoTkuJPlrrblu7rorq7vvIzku6Xkv4Pov5vlrp3lrp3lgaXlurfnmoTmiJDplb/jgIJkZAIFDw8WAh8ABdoD5aaI5aaI6YCJ5oup5LiA5YiZ5Lya5Ye6546w5aOw6Z+z55qE56ul6K+d5pWF5LqL57uZ5a2p5a2Q6K+777yM5LiA6L656K+777yM5LiA6L655Y+R5Ye65aOw6Z+z44CC54S25ZCO6Zeu5a2p5a2Q77ya5qi15aSr56CN5p+055qE5pe25YCZ5Lya5Y+R5Ye65LuA5LmI5aOw6Z+z5ZGi77yf5a2p5a2Q5Y+v5Lul5Zue562U77ya5ZKa5ZKa44CC5YaN6Zeu5a2p5a2Q77ya54uu5a2Q56qB54S25Ye6546w5LqG77yM5Lya5Y+R5Ye65LuA5LmI5aOw6Z+z5ZGi77yf5a2p5a2Q77ya5ZC8fn5+5a626ZW/5LiA6L656K+756ul6K+d55CP5om+5Ye65Y+v5Lul6K6p5a2p5a2Q5Y+R5Ye65aOw6Z+z55qE5LqL54mp77yM6K6p5a2p5a2Q6KeJ5b6X6K6v56ul6K+d55yf55qE5b6I5pyJ6Laj44CC5o+Q56S677ya5Zyo6L+b6KGM6L+Z6aG56K6t57uD5pe277yM5aaC5p6c5a2p5a2Q562U5LiN5LiK5p2l77yM5aaI5aaI5Y+v5Lul6YCC5b2T5o+Q6YaS44CCZGQCBg8PFgIfAAUM6Lqr5L2T6L+Q5YqoZGQCBw8PFgIfAAW3AeaCqOeahOWuneWuneWcqOWQjOm+hOWuneWuneS4reW3suWkhOS6juato+W4uOawtOW5s+WPkeiCsu+8jOWutumVv+W6lOe7p+e7reWKquWKm++8jOWQjOaXtuimgeS/neaMgeS4juWuneWuneeahOayn+mAmu+8jOe7k+WQiOaIkeS7rOeahOS4k+WutuW7uuiuru+8jOS7peS/g+i/m+WuneWuneWBpeW6t+eahOaIkOmVv+OAgmRkAggPDxYCHwAF3gPlh4blpIfkuIDmoLnplb/nuqYx57Gz55qE57uz5a2Q77yM546p5YW35bCP6Jmr77yM6L6D56m65pe355qE5Zy65Zyw44CC5aaI5aaI5oqK5peg5aWH5LiN5pyJ5bCP6Jmr55So57uz5a2Q57O75aW944CC5aaI5aaI5bCG546p5YW35bCP6Jmr5pS+5Zyo5Zyw5LiK77yM5ouJ552A57uz5a2Q55qE5LiA56uv5ouW552A6LeR44CC6LeR55qE5ZCM5pe277yM6K6p5a2p5a2Q5Zyo5ZCO6Z2i6L+944CC5b2T5a2p5a2Q6L+95LiK546p5YW35pe277yM6KaB55So6ISa6Lip5L2P5a6D6K+077ya5oiR5o2J5Yiw5LqG77yB5o+Q56S677ya5aaI5aaI5Zyo5ouW552A546p5YW35ZCR5YmN6LeR5pe26KaB5o6n5Yi25aW96YCf5bqm77yM5q+U5a2p5a2Q6L+955qE6YCf5bqm56iN5b+r5LiA5Lqb77yM5Lul5q2k5aKe5Yqg5a2p5a2Q6L+954mp6LeR55qE5YW06Laj44CC5q2k5aSW77yM6L+b6KGM6L+Z5Liq6K6t57uD55qE5pe26Ze05LiN6IO95aSq6ZW/44CCZGQCCQ8PFgIfAAUM55CG6Kej6IO95YqbZGQCCg8PFgIfAAW3AeaCqOeahOWuneWuneWcqOWQjOm+hOWuneWuneS4reW3suWkhOS6juato+W4uOawtOW5s+WPkeiCsu+8jOWutumVv+W6lOe7p+e7reWKquWKm++8jOWQjOaXtuimgeS/neaMgeS4juWuneWuneeahOayn+mAmu+8jOe7k+WQiOaIkeS7rOeahOS4k+WutuW7uuiuru+8jOS7peS/g+i/m+WuneWuneWBpeW6t+eahOaIkOmVv+OAgmRkAgsPDxYCHwAFqgPlh4blpIfkuKTku7bkuI3lkIznmoTnjqnlhbfvvIzlpoLkuIDlj6rnjqnlhbfni5fvvIzkuIDlj6rnjqnlhbfnjKrjgILlpojlpojlhYjmiorlsI/ni5fmlL7lnKjmpIXlrZDkuIrpnaLvvIzlkYror4nlranlrZDvvJrlsI/ni5flnKjmpIXlrZDkuIrpnaLjgILlho3miorlsI/njKrmlL7lnKjmpIXlrZDkuIvpnaLvvIzlkYror4nlranlrZDvvIzlsI/njKrlnKjkuIvpnaLjgILorqnlranlrZDmoLnmja7lpojlpojnmoTopoHmsYLvvIzliIbliKvmiorlsI/ni5fvvIzlsI/njKrmlL7liLDmpIXlrZDnmoTkuIrpnaLmiJbkuIvpnaLjgILmj5DnpLrvvJrkuIvkuIDmrKHov5vooYzov5npobnorq3nu4Pml7bvvIzlj6/ku6XmjaLkuIDkupvkuI3lkIznmoTnjqnlhbfvvIzkuZ/lj6/ku6XlsIbnjqnlhbfmlL7lnKjmoYzlrZDkuIrpnaLmiJbkuIvpnaLjgIJkZAIMDw8WAh8ABQznpL7kuqTog73liptkZAINDw8WAh8ABbcB5oKo55qE5a6d5a6d5Zyo5ZCM6b6E5a6d5a6d5Lit5bey5aSE5LqO5q2j5bi45rC05bmz5Y+R6IKy77yM5a626ZW/5bqU57un57ut5Yqq5Yqb77yM5ZCM5pe26KaB5L+d5oyB5LiO5a6d5a6d55qE5rKf6YCa77yM57uT5ZCI5oiR5Lus55qE5LiT5a625bu66K6u77yM5Lul5L+D6L+b5a6d5a6d5YGl5bq355qE5oiQ6ZW/44CCZGQCDg8PFgIfAAXoAuWmiOWmiOerlui1t+aLh+aMh+iuqeWtqeWtkOaKk+S9j++8jOWmiOWmiOWGjeaNieS9j+WtqeWtkOerlui1t+eahOaLh+aMh++8jOi9rua1geWPoOi1t+adpe+8jOeEtuWQjuWSjOWtqeWtkOS4gOm9kOivtO+8muWPoOWPoOmrmO+8jOWPoOWPoOmrmO+8jOaIkeS7rOS4gOi1t+aNieOAguW9k+ivtOWIsOKAnOS4gOi1t+aNieKAneaXtu+8jOaKveWHuuacgOW6leS4i+eahOaMh+aMh+WPoOWIsOacgOmrmOWkhOOAguWkmuasoemHjeWkjeS5i+WQju+8jOW8leWvvOWtqeWtkOS4u+WKqOadpeKAnOWPoOWPoOmrmOKAneOAguaPkOekuu+8muWmiOWmiOeahOWKqOS9nOimgei9u+aflO+8jOS4jeimgeaJreS8pOWtqeWtkOeahOaJi+aMh+OAgmRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQlzYXZlX3RydWVf0YA9Xov1R6snjCh0ZrCWTVymcg==">
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKu2/15AvC+tc0DAoznisYGL5jm5wbRkPkFRaXjXK+AOYa5VTA=">
+</div>
+    
+    <div>
+        <table width="1006" align="center">
+            <tbody><tr>
+                <td colspan="2" style="height:20px;">
+                  <img src="./biao.jpg" width="19" style="height:16px;"> <font style="color:#00A4D4;font-size: 12px;">您现在的位置 &gt;<a href="http://www.cn0-6.com/ceping.aspx" style="color:#00A4D4;font-size: 12px;">在线测评</a> &gt;智力测评</font><span id="Literal1" style="display: none;"></span><span id="Label1" style="display: none;">测试</span></td>
+                <td style="height:20px;">&nbsp;
+                    </td>
+            </tr>
+            <tr>
+                <td width="10">&nbsp;
+                    </td>
+                <td valign="top" style="height:100%;">
+
+ 
+<div id="pingu">
+	
+<table width="100%" class="border">
+            <tbody><tr><td width="75" bgcolor="Moccasin" align="center" class="heizi"><span style="font-size: 12px;">参考标准</span></td><td bgcolor="Beige" class="heizi" height="20" width="220" align="center">
+                <span style="font-size: 12px;">低于同龄儿童</span></td><td bgcolor="Wheat" class="heizi" align="center" width="220"><span style="font-size: 12px;">等于同龄儿童</span></td>
+                    <td bgcolor="SandyBrown" class="heizi" align="center" width="130"><span style="font-size: 12px;">高于同龄儿童</span></td></tr>
+            <tr><td width="75" bgcolor="Moccasin" align="center" height="35"><span style="font-size: 12px;">逻辑能力</span></td>
+                <td align="left" colspan="3"><table cellpadding="0" cellspacing="0" width="35%"><tbody><tr><td height="25" bgcolor="#EB607D"></td></tr></tbody></table></td>
+                    </tr>
+            <tr><td bgcolor="Moccasin" align="center" height="35"><span style="font-size: 12px;">语言能力</span></td><td align="left" colspan="3"><table cellpadding="0" cellspacing="0" width="65%"><tbody><tr><td height="25" bgcolor="#FEB57B"></td></tr></tbody></table></td>
+                    </tr>
+            <tr><td bgcolor="Moccasin" align="center" height="35"><span style="font-size: 12px;">身体运动</span></td><td align="left" colspan="3"><table cellpadding="0" cellspacing="0" width="65%"><tbody><tr><td height="25" bgcolor="#73C078"></td></tr></tbody></table></td>
+                    </tr>
+            <tr><td bgcolor="Moccasin" align="center" height="35"><span style="font-size: 12px;">理解能务</span></td><td align="left" colspan="3"><table cellpadding="0" cellspacing="0" width="65%"><tbody><tr><td height="25" bgcolor="#42CFD6"></td></tr></tbody></table></td>
+                    </tr>
+            <tr><td bgcolor="Moccasin" align="center" height="35"><span style="font-size: 12px;">社交能力</span></td><td align="left" colspan="3"><table cellpadding="0" cellspacing="0" width="75%"><tbody><tr><td height="25" bgcolor="#72ADF9"></td></tr></tbody></table></td>
+                    </tr>
+                    <tr><td></td><td colspan="3" style="height:25px;">
+                    </td>
+                    </tr>
+</tbody></table>
+<table class="border" style="width: 100%;"><tbody><tr><td align="center" bgcolor="#FFDEAD" class="font_class" width="10%">&nbsp; </td>
+    <td align="center" bgcolor="#FFDEAD" class="font_class" style="height:30px;width:45%;">
+        评估结果</td>
+    <td align="center" bgcolor="#FFDEAD" class="font_class" width="45%">
+        专家建议</td>
+    </tr>
+    <tr>
+        <td align="center" bgcolor="#FFEFD5" class="font_class" width="10%">
+            <span id="lblSel1" style="font-size:9pt;">逻辑能力</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="luoji_pg">依照本次测试结果看，您的孩子可能和同龄孩子相比处于稍微偏低水平，家长不要担心，我们的测试题目均采用普遍儿童的大众标准，每个孩子因个体差异和其他因素的不同可能会与本次测评有出入。只要家长平时与孩子多说话，多爱抚孩子，结合我们的专家建议，这样能很好的促进孩子的健康成长。</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="luoji_fangfa">家长任意取出一种颜色的小球，让孩子取颜色相同的小球进行配对。如果和别的小朋友一起玩，还可以进行看谁拿的对和快的比赛。提示：也可以准备一些颜色相同但形状不同的物体，让孩子分类，配对，以训练孩子对图形的观察和判断能力。</span>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" bgcolor="#FFEFD5" class="font_class" width="10%">
+            <span id="lblSel2" style="font-size:9pt;">语言能力</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="yuyan_pg">您的宝宝在同龄宝宝中已处于正常水平发育，家长应继续努力，同时要保持与宝宝的沟通，结合我们的专家建议，以促进宝宝健康的成长。</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="yuyan_fangfa">妈妈选择一则会出现声音的童话故事给孩子读，一边读，一边发出声音。然后问孩子：樵夫砍柴的时候会发出什么声音呢？孩子可以回答：咚咚。再问孩子：狮子突然出现了，会发出什么声音呢？孩子：吼~~~家长一边读童话琏找出可以让孩子发出声音的事物，让孩子觉得讯童话真的很有趣。提示：在进行这项训练时，如果孩子答不上来，妈妈可以适当提醒。</span>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" bgcolor="#FFEFD5" class="font_class" width="10%">
+            <span id="lblSel3" style="font-size:9pt;">身体运动</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="yudong_gp">您的宝宝在同龄宝宝中已处于正常水平发育，家长应继续努力，同时要保持与宝宝的沟通，结合我们的专家建议，以促进宝宝健康的成长。</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="yudong_fangfa">准备一根长约1米的绳子，玩具小虫，较空旷的场地。妈妈把无奇不有小虫用绳子系好。妈妈将玩具小虫放在地上，拉着绳子的一端拖着跑。跑的同时，让孩子在后面追。当孩子追上玩具时，要用脚踩住它说：我捉到了！提示：妈妈在拖着玩具向前跑时要控制好速度，比孩子追的速度稍快一些，以此增加孩子追物跑的兴趣。此外，进行这个训练的时间不能太长。</span>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" bgcolor="#FFEFD5" class="font_class" width="10%">
+            <span id="lblSel4" style="font-size:9pt;">理解能力</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="lijie_pg">您的宝宝在同龄宝宝中已处于正常水平发育，家长应继续努力，同时要保持与宝宝的沟通，结合我们的专家建议，以促进宝宝健康的成长。</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="lijie_fangfa">准备两件不同的玩具，如一只玩具狗，一只玩具猪。妈妈先把小狗放在椅子上面，告诉孩子：小狗在椅子上面。再把小猪放在椅子下面，告诉孩子，小猪在下面。让孩子根据妈妈的要求，分别把小狗，小猪放到椅子的上面或下面。提示：下一次进行这项训练时，可以换一些不同的玩具，也可以将玩具放在桌子上面或下面。</span>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" bgcolor="#FFEFD5" class="font_class" width="10%">
+            <span id="lblSel5" style="font-size:9pt;">社交能力</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="shejiao_pg">您的宝宝在同龄宝宝中已处于正常水平发育，家长应继续努力，同时要保持与宝宝的沟通，结合我们的专家建议，以促进宝宝健康的成长。</span>
+        </td>
+        <td align="left" bgcolor="#FFEFD5" class="font_class" width="45%">
+            &nbsp;&nbsp;<span id="shejiao_fangfa">妈妈竖起拇指让孩子抓住，妈妈再捉住孩子竖起的拇指，轮流叠起来，然后和孩子一齐说：叠叠高，叠叠高，我们一起捉。当说到“一起捉”时，抽出最底下的指指叠到最高处。多次重复之后，引导孩子主动来“叠叠高”。提示：妈妈的动作要轻柔，不要扭伤孩子的手指。</span>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="3" width="100%">
+            <div id="save_P">
+		
+                <input type="image" name="save_true" id="save_true" src="./save_true.gif" onclick="is_user();return false;" style="border-width:0px;"><input type="submit" name="Button1" value="Button" id="Button1" style="display: none;">
+                    
+            
+	</div>
+        </td>
+    </tr>
+    </tbody></table>
+            
+        
+</div>
+</td>
+                <td valign="top" width="300">
+                
+                <div id="doudong" style="position:relative">
+                <table cellpadding="0" cellspacing="0"><tbody><tr><td><img src="./zhuanjia.JPG"></td></tr></tbody></table>
+                    <table style="width:100%;" class="border_1">
+                        <tbody><tr>
+                            <td bgcolor="#FFDEAD" width="100%" align="left">
+                               <div id="font_show"></div></td>
+                        </tr>
+                        </tbody></table></div>
+                            <table style="width:100%;height:490px">
+                                <tbody><tr>
+                                    <td align="center" valign="top" style="height:490px">
+                                      <table width="200" border="0">
+  <tbody><tr>
+    <td width="6">&nbsp;</td>
+    <td colspan="2"><img src="./cepin_lieft.gif" width="238" style="height:224px;" border="0" usemap="#Map"></td>
+    <td width="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td width="22" rowspan="5">&nbsp;</td>
+    <td width="212" align="left"><a href="http://www.cn0-6.com/zl_test/1.html#aa" class="font_right">1.什么叫智力测评</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="left"><a href="http://www.cn0-6.com/zl_test/1.html#bb" class="font_right">2.如何进行智力测评</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="left"><a href="http://www.cn0-6.com/zl_test/1.html#cc" class="font_right">3.如何管理和查看智力测评结果</a></td>
+    <td>&nbsp;</td>
+  </tr>
+ 
+  <tr>
+    <td>&nbsp;</td>
+    <td align="left"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2" align="center"><img src="./shipuright_05.gif" width="191" style="height:135px;"></td>
+    <td>&nbsp;</td>
+  </tr>
+</tbody></table></td>
+                                </tr>
+                            </tbody></table>
+                        
+</td>
+            </tr>
+            <tr>
+                <td>&nbsp;
+                    </td>
+                <td>
+                    </td>
+                <td>&nbsp;
+                    </td>
+            </tr>
+        </tbody></table>
+    
+        <table width="1006" align="center">
+            <tbody><tr>
+                <td>&nbsp;
+                    </td>
+
+            </tr>
+            
+        </tbody></table>
+    
+    </div>
+    </form>
+    <map name="Map" id="Map"><area shape="rect" coords="96,99,178,121" href="http://www.cn0-6.com/tizhongmanage.aspx">
+    <area shape="rect" coords="95,65,181,90" href="http://www.cn0-6.com/ceping.aspx">
+<area shape="rect" coords="95,65,181,90" href="http://www.cn0-6.com/zl_test/test_online.aspx#"><area shape="rect" coords="93,134,177,150" href="http://www.cn0-6.com/zl_test/test_online.aspx#"><area shape="rect" coords="96,161,142,188" href="http://www.cn0-6.com/zl_test/1.html">
+    </map>
+    </center>
+
+
+
+  <script type="text/javascript">
+<!--
+       
+var tablink_idname = new Array("tablink")
+var tabcontent_idname = new Array("tabcontent") 
+var tabcount = new Array("5")
+var loadtabs = new Array("1")  
+var autochangemenu = 1;
+var changespeed = 1;//此处为突出效果而将速度调快，可以改为10左右。
+var stoponhover = 0;
+function easytabs(menunr, active)
+{
+if (menunr == autochangemenu)
+{currenttab=active;}
+if
+((menunr == autochangemenu)&&(stoponhover==1))
+{stop_autochange()}
+else if
+((menunr == autochangemenu)&&(stoponhover==0))
+{counter=0;}menunr = menunr-1;for (i=1; i <= tabcount[menunr]; i++)
+{
+document.getElementById(tablink_idname[menunr]+i).className='tab'+i;
+document.getElementById(tabcontent_idname[menunr]+i).style.display = 'none';}
+document.getElementById(tablink_idname[menunr]+active).className='tabactive';
+document.getElementById(tabcontent_idname[menunr]+active).style.display = 'block';}
+var timer; counter=0; 
+var totaltabs=tabcount[autochangemenu-1];
+var currenttab=loadtabs[autochangemenu-1];
+function start_autochange()
+{counter=counter+1;//timer=setTimeout("start_autochange()",1000);
+if (counter == changespeed+1) {
+currenttab++;
+if
+(currenttab>totaltabs) {currenttab=1}
+easytabs(autochangemenu,currenttab);restart_autochange();}
+}
+function restart_autochange
+(){clearTimeout(timer);counter=0;start_autochange();}
+function stop_autochange(){clearTimeout(timer);counter=0;}
+window.onload=function(){
+var menucount=loadtabs.length; var a = 0; var b = 1; do {easytabs(b, loadtabs[a]);  a++; b++;}while (b<=menucount);
+if (autochangemenu!=0){start_autochange();}
+}
+//-->
+
+</script><div style="position: absolute; z-index: 19700; top: -1970px; left: -1970px;"><iframe src="./My97DatePicker.html" frameborder="0" border="0" scrolling="no" style="width: 186px; height: 199px;"></iframe></div></body></html>

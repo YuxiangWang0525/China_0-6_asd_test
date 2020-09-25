@@ -1,0 +1,364 @@
+﻿<!--
+
+
+
+var xmlHttp;
+function createXMLHttpRequest(){
+if(window.ActiveXObject){
+xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+else if(window.XMLHttpRequest)
+{
+xmlHttp=new XMLHttpRequest();
+}
+}
+function zd(u)//抖动
+{ 
+ var a=['top','left'],b=0;
+ u=setInterval(function(){
+  document.getElementById('doudong').style[a[b%2]]=(b++)%4<2?0:4;
+  if(b>15){clearInterval(u);b=0}
+ },32)
+}
+
+function blinkit()//改变层背景色
+{
+	intrvl=0;
+	for(nTimes=0;nTimes<3;nTimes++)
+	{
+		intrvl += 200;
+		setTimeout("document.getElementById('font_show').style.background='#F88729';",intrvl);
+		intrvl += 200;
+		setTimeout("document.getElementById('font_show').style.background='#FFDEAD';",intrvl);
+	
+  }
+}
+
+function font_show(Med,f_idd,f_anwser)
+{
+//alert(f_anwser);
+createXMLHttpRequest();
+xmlHttp.onreadystatechange=font_back;
+xmlHttp.open("GET","font_show.aspx?getId="+f_idd+"&answer="+escape(f_anwser)+"&med="+Med,true);
+xmlHttp.send(null);
+
+}
+
+function font_back()
+{
+if(xmlHttp.readyState==4){
+if(xmlHttp.status==200){
+  var result=xmlHttp.responseText;
+  //content=result.split("|||")
+  //showDiv()
+  document.getElementById('font_show').innerHTML=result;
+  document.getElementById('font_show').style.display="block";
+  //document.getElementById('jianyi').style.display="block";
+  //zd();
+  blinkit();
+  }}
+}
+//显示层
+///*
+//显示层
+function sAlert(txt){ 
+   
+    var txt_br= fnAddBr(txt,25);
+            
+    //var eSrc=(document.all)?window.event.srcElement:arguments[1]; 
+    var shield = parent.document.createElement("DIV"); 
+    shield.id = "shield"; 
+    shield.style.position = "absolute"; 
+    shield.style.left = "0px"; 
+    shield.style.top = "0px"; 
+    shield.style.width = "100%"; 
+    //shield.style.height = document.body.scrollHeight+"px"; 
+    shield.style.height = window.screen.availHeight; 
+    shield.style.background = "#333"; 
+    shield.style.textAlign = "center"; 
+    shield.style.zIndex = "10000"; 
+    shield.style.filter = "alpha(opacity=0)"; 
+    shield.style.opacity = 0; 
+    var alertFram = parent.document.createElement("DIV"); 
+    alertFram.id="alertFram"; 
+    alertFram.style.position = "absolute"; 
+    alertFram.style.left = "50%"; 
+    alertFram.style.top = "45%"; 
+    alertFram.style.marginLeft = "-225px" ; 
+    alertFram.style.marginTop = -75+parent.document.documentElement.scrollTop+"px"; 
+    alertFram.style.width = "450px"; 
+    alertFram.style.height = "150px"; 
+    alertFram.style.background = "#ccc"; 
+    alertFram.style.textAlign = "center"; 
+    alertFram.style.lineHeight = "150px"; 
+    alertFram.style.zIndex = "10001"; 
+    strHtml = " <ul style=\"list-style:none;margin:0px;padding:0px;width:100%\">\n"; 
+    strHtml += "    <li style=\"background:#DD828D;text-align:left;padding-left:20px;font-size:14px;font-weight:bold;height:25px;line-height:25px;border:1px solid #F9CADE;\">[系统提示] </li>\n"; 
+    strHtml += "    <li style=\"background:#fff;text-align:left;font-size:12px;height:120px;line-height:23px;border-left:1px solid #F9CADE;border-right:1px solid #F9CADE;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+txt_br+" </li>\n"; 
+    strHtml += "    <li style=\"background:#FDEEF4;text-align:center;vertical-align: middle;font-weight:bold;height:30px;line-height:30px; border:1px solid #F9CADE;\"> <input type=\"button\" value=\"确 定\" id=\"do_OK\" onclick=\"doOk()\" /> </li>\n"; 
+    strHtml += " </ul>\n"; 
+   
+   /* strHtml = " <table style=\"list-style:none;margin:0px;padding:0px;width:100%\" id=content>"; 
+    strHtml += "    <tr style=\"background:#DD828D;text-align:left;padding-left:20px;font-size:14px;font-weight:bold;height:25px;line-height:25px;border:1px solid #F9CADE;\"><td>[系统提示]</td> </tr>"; 
+    strHtml += "    <tr style=\"background:#fff;text-align:center;font-size:12px;height:120px;line-height:25px;border-left:1px solid #F9CADE;border-right:1px solid #F9CADE;\"><td>"+txt_br+"</td> </tr>"; 
+    strHtml += "    <tr style=\"background:#FDEEF4;text-align:center;font-weight:bold;height:25px;line-height:25px; border:1px solid #F9CADE;\"><td><input type=\"button\" value=\"确 定\" id=\"do_OK\" onclick=\"doOk()\" /></td> </tr>"; 
+    strHtml += " </table>"; */
+    
+    
+    alertFram.innerHTML = strHtml; 
+    parent.document.body.appendChild(alertFram); 
+    parent.document.body.appendChild(shield); 
+    this.setOpacity = function(obj,opacity){ 
+        if(opacity>=1)opacity=opacity/100; 
+        try{ obj.style.opacity=opacity; }catch(e){} 
+        try{ 
+            if(obj.filters.length>0&&obj.filters("alpha")){ 
+                obj.filters("alpha").opacity=opacity*100; 
+            }else{ 
+                obj.style.filter="alpha(opacity=\""+(opacity*100)+"\")"; 
+            } 
+        }catch(e){} 
+    } 
+    var c = 0; 
+    this.doAlpha = function(){ 
+        if (++c > 20){clearInterval(ad);return 0;} 
+        setOpacity(shield,c); 
+    } 
+    var ad = setInterval("doAlpha()",1); 
+   
+    //parent.document.getElementById("do_OK").focus(); 
+    //eSrc.blur(); 
+    parent.document.body.onselectstart = function(){return false;} 
+    parent.document.body.oncontextmenu = function(){return false;} 
+    
+}
+function doOk()
+{ 
+        alert("测试2");   
+        parent.document.body.removeChild(alertFram); 
+        parent.document.body.removeChild(shield); 
+       
+        parent.document.body.onselectstart = function(){return true;} 
+        parent.document.body.oncontextmenu = function(){return true;} 
+           
+        parent.document.getElementById("Literal1").innerText=""; 
+        
+} 
+//自动换行
+function fnAddBr(txt, iPerLineLen){  
+        //var sStr=document.getElementById(id).innerHTML;  
+        var sStr=txt; 
+        if(sStr.replace(/[^\x00-\xff]/g,"xx").length <= iPerLineLen){  
+            return -1;  
+        }  
+      
+        var str="";  
+        var l=0;  
+        var schar;  
+        for(var i=0;schar=sStr.charAt(i);i++){  
+            str+=schar;  
+            l+=(schar.match(/[^\x00-\xff]/)!=null?2:1);  
+            if(l>= iPerLineLen){  
+                str+="\n";  
+                l=0;  
+            }  
+        }  
+        //document.getElementById(id).innerHTML=str;  
+        return str;
+    }
+
+//打开提示层
+function OpenDiv(){ 
+   
+               
+    //var eSrc=(document.all)?window.event.srcElement:arguments[1]; 
+    var shield = parent.document.createElement("DIV"); 
+    shield.id = "shield"; 
+    shield.style.position = "absolute"; 
+    shield.style.left = "0px"; 
+    shield.style.top = "0px"; 
+    shield.style.width = "100%"; 
+    //shield.style.height = document.body.scrollHeight+"px"; 
+    shield.style.height = window.screen.availHeight; 
+    shield.style.background = "#333"; 
+    shield.style.textAlign = "center"; 
+    shield.style.zIndex = "10000"; 
+    shield.style.filter = "alpha(opacity=0)"; 
+    shield.style.opacity = 0; 
+    var alertFram = parent.document.createElement("DIV"); 
+    alertFram.id="alertFram"; 
+    alertFram.style.position = "absolute"; 
+    alertFram.style.left = "50%"; 
+    alertFram.style.top = "45%"; 
+    alertFram.style.marginLeft = "-225px" ; 
+    alertFram.style.marginTop = -75+parent.document.documentElement.scrollTop+"px"; 
+    alertFram.style.width = "450px"; 
+    alertFram.style.height = "145px"; 
+    alertFram.style.background = "#ccc"; 
+    alertFram.style.textAlign = "center"; 
+    alertFram.style.lineHeight = "150px"; 
+    alertFram.style.zIndex = "10001"; 
+     strHtml = " <ul style=\"list-style:none;margin:0px;padding:0px;width:100%\">\n"; 
+    strHtml += "    <li style=\"background:#DD828D;text-align:left;padding-left:20px;font-size:14px;font-weight:bold;height:25px;line-height:25px;border:1px solid #F9CADE;\">[系统提示] </li>\n"; 
+    strHtml += "    <li style=\"background:#FAEBD7;text-align:center;text_valign:middle;font-size:12px;height:145px;line-height:23px;border:1px solid #F9CADE\">&nbsp;&nbsp;&nbsp;&nbsp;<img src='../zl_test/images/tishi.gif' border='0'/><br><br><a href='../register.html' target='_blank'><img src='../zl_test/images/zhuce.gif' border='0'/></a><img src='../zl_test/images/colse_img.gif' border='0' onclick='doOk()' style='cursor:hand;'/></li>\n"; 
+   
+    strHtml += " </ul>\n";
+
+    alertFram.innerHTML = strHtml; 
+    parent.document.body.appendChild(alertFram); 
+    parent.document.body.appendChild(shield); 
+    this.setOpacity = function(obj,opacity){ 
+        if(opacity>=1)opacity=opacity/100; 
+        try{ obj.style.opacity=opacity; }catch(e){} 
+        try{ 
+            if(obj.filters.length>0&&obj.filters("alpha")){ 
+                obj.filters("alpha").opacity=opacity*100; 
+            }else{ 
+                obj.style.filter="alpha(opacity=\""+(opacity*100)+"\")"; 
+            } 
+        }catch(e){} 
+    } 
+    var c = 0; 
+    this.doAlpha = function(){ 
+        if (++c > 20){clearInterval(ad);return 0;} 
+        setOpacity(shield,c); 
+    } 
+    var ad = setInterval("doAlpha()",1); 
+   
+    //parent.document.getElementById("do_OK").focus(); 
+    //eSrc.blur(); 
+    parent.document.body.onselectstart = function(){return false;} 
+    parent.document.body.oncontextmenu = function(){return false;} 
+}
+//测评管理调用此方法
+function OpenDiv_ABC(){ 
+   
+    
+    //var eSrc=(document.all)?window.event.srcElement:arguments[1]; 
+    var shield =parent.parent.document.createElement("DIV"); 
+    shield.id = "shield"; 
+    shield.style.position = "absolute"; 
+    shield.style.left = "0px"; 
+    shield.style.top = "0px"; 
+    shield.style.width = "100%"; 
+    //shield.style.height = document.body.scrollHeight+"px"; 
+    shield.style.height = window.screen.availHeight; 
+    shield.style.background = "#333"; 
+    shield.style.textAlign = "center"; 
+    shield.style.zIndex = "10000"; 
+    shield.style.filter = "alpha(opacity=0)"; 
+    shield.style.opacity = 0; 
+    var alertFram = parent.parent.document.createElement("DIV"); 
+    alertFram.id="alertFram"; 
+    alertFram.style.position = "absolute"; 
+    alertFram.style.left = "50%"; 
+    alertFram.style.top = "45%"; 
+    alertFram.style.marginLeft = "-225px" ; 
+    alertFram.style.marginTop = -75+parent.parent.document.documentElement.scrollTop+"px"; 
+    alertFram.style.width = "450px"; 
+    alertFram.style.height = "145px"; 
+    alertFram.style.background = "#ccc"; 
+    alertFram.style.textAlign = "center"; 
+    alertFram.style.lineHeight = "150px"; 
+    alertFram.style.zIndex = "10001"; 
+     strHtml = " <ul style=\"list-style:none;margin:0px;padding:0px;width:100%\">\n"; 
+    strHtml += "    <li style=\"background:#DD828D;text-align:left;padding-left:20px;font-size:14px;font-weight:bold;height:25px;line-height:25px;border:1px solid #F9CADE;\">[系统提示] </li>\n"; 
+    strHtml += "    <li style=\"background:#FAEBD7;text-align:center;text_valign:middle;font-size:12px;height:145px;line-height:23px;border:1px solid #F9CADE\">&nbsp;&nbsp;&nbsp;&nbsp;<img src='../zl_test/images/tishi_guanli.jpg' border='0'/><br><br><a href='../register.html' target='_blank'><img src='../zl_test/images/zhuce.gif' border='0'/></a><img src='../zl_test/images/colse_img.gif' border='0' onclick='doOk()' style='cursor:hand;'/></li>\n"; 
+   
+    strHtml += " </ul>\n";
+
+    alertFram.innerHTML = strHtml; 
+    parent.parent.document.body.appendChild(alertFram); 
+    parent.parent.document.body.appendChild(shield); 
+    this.setOpacity = function(obj,opacity){ 
+        if(opacity>=1)opacity=opacity/100; 
+        try{ obj.style.opacity=opacity; }catch(e){} 
+        try{ 
+            if(obj.filters.length>0&&obj.filters("alpha")){ 
+                obj.filters("alpha").opacity=opacity*100; 
+            }else{ 
+                obj.style.filter="alpha(opacity=\""+(opacity*100)+"\")"; 
+            } 
+        }catch(e){} 
+    } 
+    var c = 0; 
+    this.doAlpha = function(){ 
+        if (++c > 20){clearInterval(ad);return 0;} 
+        setOpacity(shield,c); 
+    } 
+    var ad = setInterval("doAlpha()",1); 
+   
+    //parent.parent.document.getElementById("do_OK").focus(); 
+    //eSrc.blur(); 
+    parent.parent.document.body.onselectstart = function(){return false;} 
+    parent.parent.document.body.oncontextmenu = function(){return false;} 
+    
+}
+
+function OpenDiv_ABC2(){ 
+   
+    
+    //var eSrc=(document.all)?window.event.srcElement:arguments[1]; 
+    var shield =parent.parent.document.createElement("DIV"); 
+    shield.id = "shield"; 
+    shield.style.position = "absolute"; 
+    shield.style.left = "0px"; 
+    shield.style.top = "0px"; 
+    shield.style.width = "100%"; 
+    //shield.style.height = document.body.scrollHeight+"px"; 
+    shield.style.height = window.screen.availHeight; 
+    shield.style.background = "#333"; 
+    shield.style.textAlign = "center"; 
+    shield.style.zIndex = "10000"; 
+    shield.style.filter = "alpha(opacity=0)"; 
+    shield.style.opacity = 0; 
+    var alertFram = parent.parent.document.createElement("DIV"); 
+    alertFram.id="alertFram"; 
+    alertFram.style.position = "absolute"; 
+    alertFram.style.left = "50%"; 
+    alertFram.style.top = "45%"; 
+    alertFram.style.marginLeft = "-225px" ; 
+    alertFram.style.marginTop = -75+parent.parent.document.documentElement.scrollTop+"px"; 
+    alertFram.style.width = "450px"; 
+    alertFram.style.height = "145px"; 
+    alertFram.style.background = "#ccc"; 
+    alertFram.style.textAlign = "center"; 
+    alertFram.style.lineHeight = "150px"; 
+    alertFram.style.zIndex = "10001"; 
+     strHtml = " <ul style=\"list-style:none;margin:0px;padding:0px;width:100%\">\n"; 
+    strHtml += "    <li style=\"background:#DD828D;text-align:left;padding-left:20px;font-size:14px;font-weight:bold;height:25px;line-height:25px;border:1px solid #F9CADE;\">[系统提示] </li>\n"; 
+    strHtml += "    <li style=\"background:#FAEBD7;text-align:center;text_valign:middle;font-size:12px;height:145px;line-height:23px;border:1px solid #F9CADE\">&nbsp;&nbsp;&nbsp;&nbsp;<img src='images/tishi.gif' border='0'/><br><br><img src='images/colse_img.gif' border='0' onclick='doOk()' style='cursor:hand;'/></li>\n"; 
+   
+    strHtml += " </ul>\n";
+
+    alertFram.innerHTML = strHtml; 
+    parent.parent.document.body.appendChild(alertFram); 
+    parent.parent.document.body.appendChild(shield); 
+    this.setOpacity = function(obj,opacity){ 
+        if(opacity>=1)opacity=opacity/100; 
+        try{ obj.style.opacity=opacity; }catch(e){} 
+        try{ 
+            if(obj.filters.length>0&&obj.filters("alpha")){ 
+                obj.filters("alpha").opacity=opacity*100; 
+            }else{ 
+                obj.style.filter="alpha(opacity=\""+(opacity*100)+"\")"; 
+            } 
+        }catch(e){} 
+    } 
+    var c = 0; 
+    this.doAlpha = function(){ 
+        if (++c > 20){clearInterval(ad);return 0;} 
+        setOpacity(shield,c); 
+    } 
+    var ad = setInterval("doAlpha()",1); 
+   
+    //parent.parent.document.getElementById("do_OK").focus(); 
+    //eSrc.blur(); 
+    parent.parent.document.body.onselectstart = function(){return false;} 
+    parent.parent.document.body.oncontextmenu = function(){return false;} 
+    
+}
+//
+
+
+-->

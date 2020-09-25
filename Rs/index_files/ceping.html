@@ -1,0 +1,1143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://www.cn0-6.com/zl_test/test_online.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <script type="text/javascript" src="./test_ajax.js.下载"></script>
+    <script type="text/javascript" src="./tongji_code.js.下载"></script>
+    <script type="text/javascript" src="./WdatePicker.js.下载"></script><link href="./WdatePicker.css" rel="stylesheet" type="text/css">
+    <title>
+	成长测评
+</title><meta name="KeyWords" contect=""><meta name="Description" contect=""><link href="./css.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+*{margin:0;padding:0;list-style:none;}
+  a{text-decoration:none;}
+  a:hover{text-decoration:underline;}
+/*自动滚动tab标签*/ 
+.News_tab{width:650px;height:100%;}
+.News_tab_title_bg{width:650px;background:url();}
+.News_tab_title{width:680px;height:41px;font:600 12px "宋体";line-height:41px;}/*导航总宽度*/
+.News_tab_title li{display:inline;float:left;background:url(images/luoji_top_2.gif);margin-right:1px;text-align:center;}
+.News_tab_title li a{width:96px;height:41px;display:inline-block;color:#000;}/*导航宽度*/
+.News_tab_title li a.tabactive{color:#fff;background:url(images/yuyan_top_2.gif);}
+.News_tab_content{width:680px;border:1px solid #e7c391;border-top:none;background-color:#FDB4B8; height:100%;}
+.tab_content{ height:100%;}
+.tab_content li{border-bottom:1px dotted #C0C0C0;line-height:28px;background:url() no-repeat left;padding-left:3px;list-style:none;}
+.tab_content li a{display:inline-block;width:650px;font-size:12px;color:#000;}
+.tab_content li a:hover{color:#f00;text-decoration:underline;}
+.tab_content li a:active{color:#f00;}
+.tab_content li:hover{background-color:#F5F5F5;}
+.tab_content li span{text-align:center;font-size:12px;color:#666;}
+.tab_content ul{margin:0 5px;padding:10px 0 0 0;}
+.FONT{height:100%;}
+.font_right {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #009900;
+	text-decoration: none;
+	 line-height: 20px;   
+}
+
+  </style>
+<!--关闭建议-->
+<script type="text/javascript">
+<!-- Hide
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+//-->强制不报错
+var xmlHttp;
+function createXMLHttpRequest(){if(window.ActiveXObject){xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");}else if(window.XMLHttpRequest){xmlHttp=new XMLHttpRequest();}}
+function is_user()
+{
+createXMLHttpRequest();xmlHttp.onreadystatechange=loadUser;xmlHttp.open("GET","/System_Ajax/UserLogin.aspx?Med=",true);xmlHttp.setRequestHeader('Cache-Control','no-cache');xmlHttp.send(null);document.getElementById('save_true').disabled='disabled';
+}
+function loadUser(){if(xmlHttp.readyState==4){
+if(xmlHttp.status==200){
+document.getElementById('save_true').disabled='';
+var result=xmlHttp.responseText;
+
+switch(result)
+{ 
+case "0": 
+OpenDiv();
+return false;
+break; 
+default: 
+document.getElementById("Button1").click();
+break;}}
+}
+}
+
+//tishi
+function tishi_mon()
+{
+sAlert('您的宝宝目前的年龄在此范围内属于偏小年龄，您可以进行本次测试，如果测评结果不理想，家长也不要着急,因为所得测评结果以及建议,是取同龄儿童、大众标准，是作为家长在平时教育宝宝的一个辅助教材和参考,最重要的还是要靠家长平时多和宝宝多沟通交流、做游戏，以促进宝宝的发育，并进行正确的引导和教育。');
+}
+
+</script>
+
+</head>
+<body marginwidth="0" marginheight="0">
+<center>
+    <form name="form1" method="post" action="http://www.cn0-6.com/zl_test/test_online.aspx" id="form1" onsubmit="yanzheng();">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE3MjU3NzI4Nw9kFgICAw9kFggCAQ8PFgIeBFRleHQFMzxzY3JpcHQgbGFuZ3VhZ2U9J2phdmFzY3JpcHQnPnRpc2hpX21vbigpOzwvc2NyaXB0PmRkAgQPZBYUAgYPPCsACQEADxYEHghEYXRhS2V5cxYAHgtfIUl0ZW1Db3VudAIGZBYMZg9kFghmDxUCATH+Aei0tOiEuOiwse+8iOWktOWPkeOAgeecieavm+OAgeecvOedm+OAgem8u+WtkOOAgeWYtOWUh+OAgeiAs+acte+8ie+8jOi0tOWvueWHoOenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgNuenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh4Hb25jbGljawUZZm9udF9zaG93KCdhJyw0NTUsJzbnp40nKWRkZAIDDxAPFgIfAAUgNeenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2InLDQ1NSwnNeenjScpZGRkAgUPEA8WAh8ABSQz56eN5Lul5LiLICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBR9mb250X3Nob3coJ2MnLDQ1NSwnM+enjeS7peS4iycpZGRkAgEPZBYIZg8VAgEy3gHlraborqTok53oibLlt7LorqTor4blh6Dnp43popzoibIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABS4456eN77yI5YyF5ous5rex5rWF6Imy77yJICAgICAgICAgICAgICAgICAgICAgFgIfAwUuZm9udF9zaG93KCdhJyw0NTQsJzjnp43vvIjljIXmi6zmt7HmtYXoibLvvIknKWRkZAIDDxAPFgIfAAUgN+enjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2InLDQ1NCwnN+enjScpZGRkAgUPEA8WAh8ABSQ156eN5Lul5LiLICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBR9mb250X3Nob3coJ2MnLDQ1NCwnNeenjeS7peS4iycpZGRkAgIPZBYIZg8VAgEziALnp6/mnKjmkK3pl6jmpbzlkozph5HlrZfloZTog73mkK3kuIoz5Z2X5LiLMuWdl+eahOmXqOalvOS4jjPlsYLph5HlrZfloZTjgIE05bGC6YeR5a2X5aGU5Lit55qE5Yeg56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSAz56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFGWZvbnRfc2hvdygnYScsNDUzLCcz56eNJylkZGQCAw8QDxYCHwAFIDLnp40gICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUZZm9udF9zaG93KCdiJyw0NTMsJzLnp40nKWRkZAIFDxAPFgIfAAUgMeenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2MnLDQ1MywnMeenjScpZGRkAgMPZBYIZg8VAgE09gHkuIrntKflj4rmi6flvIDonrrkuJ3kvb/nlKjmiYvjgIHonrrkuJ3plKXjgIHmub/luIPkuK3nmoTlh6Dnp43mlrnms5UgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSAz56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFGWZvbnRfc2hvdygnYScsNDUyLCcz56eNJylkZGQCAw8QDxYCHwAFIDLnp40gICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUZZm9udF9zaG93KCdiJyw0NTIsJzLnp40nKWRkZAIFDxAPFgIfAAUgMeenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2MnLDQ1MiwnMeenjScpZGRkAgQPZBYIZg8VAgE10AHlrablhpnmlbDlrZcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgNOS4qiAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2EnLDQ1MSwnNOS4qicpZGRkAgMPEA8WAh8ABSAz5LiqICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFGWZvbnRfc2hvdygnYicsNDUxLCcz5LiqJylkZGQCBQ8QDxYCHwAFIDHkuKogICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUZZm9udF9zaG93KCdjJyw0NTEsJzHkuKonKWRkZAIFD2QWCGYPFQIBNpQC5o6S5pWw5a2X5Lya55So5Yeg56eN5pa55rOV5o6S5pWw5a2X77yIMe+9njEw77yM5LuO5Lu75L2V5LiA5Liq5pWw6LW35o6SMuS4quOAgeaOkjPkuKrjgIHmjpI05Liq44CB5o6SNeS4qui/nue7reeahOaVsO+8iSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgNOenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2EnLDQ1MCwnNOenjScpZGRkAgMPEA8WAh8ABSAz56eNICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFGWZvbnRfc2hvdygnYicsNDUwLCcz56eNJylkZGQCBQ8QDxYCHwAFIDHnp40gICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUZZm9udF9zaG93KCdjJyw0NTAsJzHnp40nKWRkZAIIDw8WAh4HVmlzaWJsZWdkZAIKDzwrAAkBAA8WBB8BFgAfAgIFZBYKZg9kFghmDxUCATHYAeWuneWuneS8muS7jjHmlbDliLAxMOWQl++8nyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFLOiDve+8jOiAjOS4lOi+g+a1geWIqSAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUqZm9udF9zaG93KCdhJyw0NjAsJ+iDve+8jOiAjOS4lOi+g+a1geWIqScpZGRkAgMPEA8WAh8ABSzog73vvIzkuI3mmK/lvojmtYHliKkgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFKmZvbnRfc2hvdygnYicsNDYwLCfog73vvIzkuI3mmK/lvojmtYHliKknKWRkZAIFDxAPFgIfAAUi5LiN6IO9ICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFG2ZvbnRfc2hvdygnYycsNDYwLCfkuI3og70nKWRkZAIBD2QWCGYPFQIBMoAC5a6d5a6d5Zac5qyi6Zeu6Zeu6aKY5ZCX77yf5L6L5aaC77ya6Zeu4oCc6L+Z5piv5LuA5LmI77yf4oCd44CB4oCc6YKj5piv5LuA5LmI4oCd77yfICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFJOe7j+W4uOmXriAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFHmZvbnRfc2hvdygnYScsNDU5LCfnu4/luLjpl64nKWRkZAIDDxAPFgIfAAUk5YG25bCU6ZeuICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUeZm9udF9zaG93KCdiJyw0NTksJ+WBtuWwlOmXricpZGRkAgUPEA8WAh8ABSbku47mnaXkuI3pl64gICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFIWZvbnRfc2hvdygnYycsNDU5LCfku47mnaXkuI3pl64nKWRkZAICD2QWCGYPFQIBM9QB5a2m5ZSx5YS/56ul5q2M5puyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSLllLEz6aaWICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUcZm9udF9zaG93KCdhJyw0NTgsJ+WUsTPpppYnKWRkZAIDDxAPFgIfAAUi5ZSxMummliAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFHGZvbnRfc2hvdygnYicsNDU4LCfllLEy6aaWJylkZGQCBQ8QDxYCHwAFKOWUsTHpppbmiJbkuI3kvJogICAgICAgICAgICAgICAgICAgICAgICAWAh8DBSVmb250X3Nob3coJ2MnLDQ1OCwn5ZSxMemmluaIluS4jeS8micpZGRkAgMPZBYIZg8VAgE05gHor7Tlh7rogYzkuJrnp7Dlkbzog73or7Tlh7rlh6Dnp43ogYzkuJrnp7DlkbwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFIDbnp40gICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUZZm9udF9zaG93KCdhJyw0NTcsJzbnp40nKWRkZAIDDxAPFgIfAAUgNeenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2InLDQ1NywnNeenjScpZGRkAgUPEA8WAh8ABSTlsJHkuo4056eNICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBR9mb250X3Nob3coJ2MnLDQ1Nywn5bCR5LqONOenjScpZGRkAgQPZBYIZg8VAgE14AHpl67igJzkvaDigJ3ml7bvvIznlKjigJzmiJHigJ3lm57nrZQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFLueri+WNs+eUqOKAnOaIkeKAneWbnuetlCAgICAgICAgICAgICAgICAgICAgICAWAh8DBS1mb250X3Nob3coJ2EnLDQ1Niwn56uL5Y2z55So4oCc5oiR4oCd5Zue562UJylkZGQCAw8QDxYCHwAFMOaDs+WQjuS8mueUqOKAnOaIkeKAneWbnuetlCAgICAgICAgICAgICAgICAgICAgIBYCHwMFMGZvbnRfc2hvdygnYicsNDU2LCfmg7PlkI7kvJrnlKjigJzmiJHigJ3lm57nrZQnKWRkZAIFDxAPFgIfAAUw5LiN5Lya77yM55So5omL5ouN6IO46KGo56S6ICAgICAgICAgICAgICAgICAgICAgFgIfAwUwZm9udF9zaG93KCdjJyw0NTYsJ+S4jeS8mu+8jOeUqOaJi+aLjeiDuOihqOekuicpZGRkAgwPDxYCHwRnZGQCDg88KwAJAQAPFgQfARYAHwICA2QWBmYPZBYIZg8VAgEx4gHnlLvlnIblnIjog73nlLvlh7rlh6DkuKrlsIHlj6PnmoTlnIblvaIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgNOS4qiAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2EnLDQ2MywnNOS4qicpZGRkAgMPEA8WAh8ABSAz5LiqICAgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFGWZvbnRfc2hvdygnYicsNDYzLCcz5LiqJylkZGQCBQ8QDxYCHwAFIDEtMuS4qiAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUbZm9udF9zaG93KCdjJyw0NjMsJzEtMuS4qicpZGRkAgEPZBYIZg8VAgEy4gHmjqXnkIPmjqXkvY/ot53nprvlh6DnsbPov5zmipvmnaXnmoTnkIMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUgMuexsyAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2EnLDQ2MiwnMuexsycpZGRkAgMPEA8WAh8ABSAxLjXnsbMgICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFG2ZvbnRfc2hvdygnYicsNDYyLCcxLjXnsbMnKWRkZAIFDxAPFgIfAAUiMC4157GzLTHnsbMgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFIGZvbnRfc2hvdygnYycsNDYyLCcwLjXnsbMtMeexsycpZGRkAgIPZBYIZg8VAgEzigLotbDlubPooaHmnKjog73lgZrlh6Dnp43liqjkvZzvvIjlpLTkuIrmnInkuabvvIzlj4zmiYvmj5Dnr67vvIzlj4zmiYvmi7/pk4Ppk5vvvIzlgZrmnYLmioDliqjkvZzvvIkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFIDPnp40gICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUZZm9udF9zaG93KCdhJyw0NjEsJzPnp40nKWRkZAIDDxAPFgIfAAUgMuenjSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRlmb250X3Nob3coJ2InLDQ2MSwnMuenjScpZGRkAgUPEA8WAh8ABSAwLTHnp40gICAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFG2ZvbnRfc2hvdygnYycsNDYxLCcwLTHnp40nKWRkZAIQDw8WAh8EZ2RkAhIPPCsACQEADxYEHwEWAB8CAgRkFghmD2QWCGYPFQIBMYAC57uZ5a6d5a6d6K6y5a6M5LiA5Liq5pWF5LqL5ZCO77yM5a6d5a6d6IO95LiN6IO96K6w5L2P5pWF5LqL5Lit5LiA5Liq6KeS6Imy55qE5ZCN5a2XICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFIOiDvSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUYZm9udF9zaG93KCdhJyw0NjcsJ+iDvScpZGRkAgMPEA8WAh8ABSLlgbblsJQgICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUbZm9udF9zaG93KCdiJyw0NjcsJ+WBtuWwlCcpZGRkAgUPEA8WAh8ABSLkuI3og70gICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUbZm9udF9zaG93KCdjJyw0NjcsJ+S4jeiDvScpZGRkAgEPZBYIZg8VAgEyrALlpojlpojlgYfoo4XmiormiYvmjIfliJLnoLTvvIzlr7nlrp3lrp3or7TvvJrlpojlpojnmoTmiYvnoLTkuobvvIzkuI3og73msr7msLTjgILlrp3lrp3njrDlnKjplb/lpKfkuobvvIzopoHluK7lpojlpojvvIzppa3liY3lj6/ku6Xoh6rlt7HljrvmtJfmiYvlkJcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSjkvJroh6rlt7HmtJfmiYsgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUkZm9udF9zaG93KCdhJyw0NjYsJ+S8muiHquW3sea0l+aJiycpZGRkAgMPEA8WAh8ABSLlgbblsJQgICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUbZm9udF9zaG93KCdiJyw0NjYsJ+WBtuWwlCcpZGRkAgUPEA8WAh8ABSLkuI3kvJogICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUbZm9udF9zaG93KCdjJyw0NjYsJ+S4jeS8micpZGRkAgIPZBYIZg8VAgEznALlrp3lrp3og73oh6rooYzlr7nigJwgKiog5Zyo5ZOq6YeM77yf4oCd6L+Z6Zeu6aKY5L2c5Ye65q2j56Gu55qE5Y+N5bqU77yI5Y2z5Yip55So6KeG6KeJ5pCc57Si5oi/6Ze077yM5bm25oyH5Ye654mp5Lu255qE5L2N572u77yJICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFLOiDveW5tuS4lOato+ehruaJvuWHuiAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUqZm9udF9zaG93KCdhJyw0NjUsJ+iDveW5tuS4lOato+ehruaJvuWHuicpZGRkAgMPEA8WAh8ABTDog73mib7lh7rvvIzml7bpl7Tplb/kuIDkupsgICAgICAgICAgICAgICAgICAgICAWAh8DBTBmb250X3Nob3coJ2InLDQ2NSwn6IO95om+5Ye677yM5pe26Ze06ZW/5LiA5LqbJylkZGQCBQ8QDxYCHwAFKuayoeacieS7u+S9leWPjeW6lCAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFJ2ZvbnRfc2hvdygnYycsNDY1LCfmsqHmnInku7vkvZXlj43lupQnKWRkZAIDD2QWCGYPFQIBNP4B5a6d5a6d5a+54oCc5YGc77yI5YGc5q2i77yJ4oCd5ZKM4oCc6KGM77yI6LWw77yJ4oCd55qE5oyH5Luk5L2c5Ye65q2j56Gu55qE5Y+N5bqUICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABTDog73lpJ/mraPnoa7nmoTkvZzlh7rooYzkuLogICAgICAgICAgICAgICAgICAgICAWAh8DBTBmb250X3Nob3coJ2EnLDQ2NCwn6IO95aSf5q2j56Gu55qE5L2c5Ye66KGM5Li6JylkZGQCAw8QDxYCHwAFKOWBtuWwlOS8muWHuumUmSAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBSRmb250X3Nob3coJ2InLDQ2NCwn5YG25bCU5Lya5Ye66ZSZJylkZGQCBQ8QDxYCHwAFIuS4jeiDvSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRtmb250X3Nob3coJ2MnLDQ2NCwn5LiN6IO9JylkZGQCFA8PFgIfBGdkZAIWDzwrAAkBAA8WBB8BFgAfAgIFZBYKZg9kFghmDxUCATGKAuWuneWuneacieS4gOWumueahOaYr+mdnuinguW/teWQl++8n+S+i+Wmgu+8muWuneWuneefpemBk+KAnOaJk+S6uuS4jeWvueKAneOAgeKAnOWQteaetuS4jeWlveKAneetiSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIBDxAPFgIfAAUg5pyJICAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRhmb250X3Nob3coJ2EnLDQ3Miwn5pyJJylkZGQCAw8QDxYCHwAFLOacie+8jOS9huavlOi+g+aooeeziiAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUqZm9udF9zaG93KCdiJyw0NzIsJ+acie+8jOS9huavlOi+g+aooeeziicpZGRkAgUPEA8WAh8ABSLmsqHmnIkgICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUbZm9udF9zaG93KCdjJyw0NzIsJ+ayoeaciScpZGRkAgEPZBYIZg8VAgEyiALlrp3lrp3mnInkuIDlrprnmoToh6rnkIbog73lipvlkJfvvJ/mr5TlpoLkvJroh6rlt7HlkIPppa3vvIzoh6rlt7HmtJfohLjvvIzoh6rlt7HohLHooaPmnI3nrYnjgIIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABS7ln7rmnKzlj6/ku6Xoh6rlt7Hop6PlhrMgICAgICAgICAgICAgICAgICAgICAgFgIfAwUtZm9udF9zaG93KCdhJyw0NzEsJ+WfuuacrOWPr+S7peiHquW3seino+WGsycpZGRkAgMPEA8WAh8ABTDlj6/ku6XlgZrliLDln7rkuK3kuIDkuKTmoLcgICAgICAgICAgICAgICAgICAgICAWAh8DBTBmb250X3Nob3coJ2InLDQ3MSwn5Y+v5Lul5YGa5Yiw5Z+65Lit5LiA5Lik5qC3JylkZGQCBQ8QDxYCHwAFIuS4jeiDvSAgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBRtmb250X3Nob3coJ2MnLDQ3MSwn5LiN6IO9JylkZGQCAg9kFghmDxUCATP2AeWuneWuneWWnOasoui3n+WcqOavlOiHquW3seW5tOm+hOWkp+eahOWwj+aci+WPi+WQjumdoui1sOedgOeOqeWQl++8nyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQCAQ8QDxYCHwAFLOWWnOasou+8jOiAjOS4lOe7j+W4uCAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUqZm9udF9zaG93KCdhJyw0NzAsJ+WWnOasou+8jOiAjOS4lOe7j+W4uCcpZGRkAgMPEA8WAh8ABSLlgbblsJQgICAgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUbZm9udF9zaG93KCdiJyw0NzAsJ+WBtuWwlCcpZGRkAgUPEA8WAh8ABSTkuI3llpzmrKIgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBR5mb250X3Nob3coJ2MnLDQ3MCwn5LiN5Zac5qyiJylkZGQCAw9kFghmDxUCATTQAeWPluaKpeWPluWltiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSjni6zoh6rkvJrlgZoy56eNICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUlZm9udF9zaG93KCdhJyw0NjksJ+eLrOiHquS8muWBmjLnp40nKWRkZAIDDxAPFgIfAAUo54us6Ieq5Lya5YGaMeenjSAgICAgICAgICAgICAgICAgICAgICAgIBYCHwMFJWZvbnRfc2hvdygnYicsNDY5LCfni6zoh6rkvJrlgZox56eNJylkZGQCBQ8QDxYCHwAFLOWkp+S6uuebkeaKpOS4i+aVouWBmiAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUqZm9udF9zaG93KCdjJyw0NjksJ+Wkp+S6uuebkeaKpOS4i+aVouWBmicpZGRkAgQPZBYIZg8VAgE12AHkuIDnvZHkuI3mjZ7psbzmuLjmiI/ml7YgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkAgEPEA8WAh8ABSTlrojop4TliJkgICAgICAgICAgICAgICAgICAgICAgICAgICAWAh8DBR5mb250X3Nob3coJ2EnLDQ2OCwn5a6I6KeE5YiZJylkZGQCAw8QDxYCHwAFJkLkuonnnYDlhaXnvZEgICAgICAgICAgICAgICAgICAgICAgICAgFgIfAwUiZm9udF9zaG93KCdiJyw0NjgsJ0LkuonnnYDlhaXnvZEnKWRkZAIFDxAPFgIfAAUs5LiN5YWl6Zif5oiW6ZqP5aSn5rWBICAgICAgICAgICAgICAgICAgICAgICAWAh8DBSpmb250X3Nob3coJ2MnLDQ2OCwn5LiN5YWl6Zif5oiW6ZqP5aSn5rWBJylkZGQCGA8PFgIfBGdkZAIGDw8WAh8EaGRkAggPDxYCHwRoZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFosBBR5kYXRhX2dyaWRfMSRjdGwwMCRSYWRpb0J1dHRvbjEFHmRhdGFfZ3JpZF8xJGN0bDAwJFJhZGlvQnV0dG9uMQUeZGF0YV9ncmlkXzEkY3RsMDAkUmFkaW9CdXR0b24yBR5kYXRhX2dyaWRfMSRjdGwwMCRSYWRpb0J1dHRvbjIFHmRhdGFfZ3JpZF8xJGN0bDAwJFJhZGlvQnV0dG9uMwUeZGF0YV9ncmlkXzEkY3RsMDAkUmFkaW9CdXR0b24zBR5kYXRhX2dyaWRfMSRjdGwwMSRSYWRpb0J1dHRvbjEFHmRhdGFfZ3JpZF8xJGN0bDAxJFJhZGlvQnV0dG9uMQUeZGF0YV9ncmlkXzEkY3RsMDEkUmFkaW9CdXR0b24yBR5kYXRhX2dyaWRfMSRjdGwwMSRSYWRpb0J1dHRvbjIFHmRhdGFfZ3JpZF8xJGN0bDAxJFJhZGlvQnV0dG9uMwUeZGF0YV9ncmlkXzEkY3RsMDEkUmFkaW9CdXR0b24zBR5kYXRhX2dyaWRfMSRjdGwwMiRSYWRpb0J1dHRvbjEFHmRhdGFfZ3JpZF8xJGN0bDAyJFJhZGlvQnV0dG9uMQUeZGF0YV9ncmlkXzEkY3RsMDIkUmFkaW9CdXR0b24yBR5kYXRhX2dyaWRfMSRjdGwwMiRSYWRpb0J1dHRvbjIFHmRhdGFfZ3JpZF8xJGN0bDAyJFJhZGlvQnV0dG9uMwUeZGF0YV9ncmlkXzEkY3RsMDIkUmFkaW9CdXR0b24zBR5kYXRhX2dyaWRfMSRjdGwwMyRSYWRpb0J1dHRvbjEFHmRhdGFfZ3JpZF8xJGN0bDAzJFJhZGlvQnV0dG9uMQUeZGF0YV9ncmlkXzEkY3RsMDMkUmFkaW9CdXR0b24yBR5kYXRhX2dyaWRfMSRjdGwwMyRSYWRpb0J1dHRvbjIFHmRhdGFfZ3JpZF8xJGN0bDAzJFJhZGlvQnV0dG9uMwUeZGF0YV9ncmlkXzEkY3RsMDMkUmFkaW9CdXR0b24zBR5kYXRhX2dyaWRfMSRjdGwwNCRSYWRpb0J1dHRvbjEFHmRhdGFfZ3JpZF8xJGN0bDA0JFJhZGlvQnV0dG9uMQUeZGF0YV9ncmlkXzEkY3RsMDQkUmFkaW9CdXR0b24yBR5kYXRhX2dyaWRfMSRjdGwwNCRSYWRpb0J1dHRvbjIFHmRhdGFfZ3JpZF8xJGN0bDA0JFJhZGlvQnV0dG9uMwUeZGF0YV9ncmlkXzEkY3RsMDQkUmFkaW9CdXR0b24zBR5kYXRhX2dyaWRfMSRjdGwwNSRSYWRpb0J1dHRvbjEFHmRhdGFfZ3JpZF8xJGN0bDA1JFJhZGlvQnV0dG9uMQUeZGF0YV9ncmlkXzEkY3RsMDUkUmFkaW9CdXR0b24yBR5kYXRhX2dyaWRfMSRjdGwwNSRSYWRpb0J1dHRvbjIFHmRhdGFfZ3JpZF8xJGN0bDA1JFJhZGlvQnV0dG9uMwUeZGF0YV9ncmlkXzEkY3RsMDUkUmFkaW9CdXR0b24zBR5kYXRhX2dyaWRfMiRjdGwwMCRSYWRpb0J1dHRvbjUFHmRhdGFfZ3JpZF8yJGN0bDAwJFJhZGlvQnV0dG9uNQUeZGF0YV9ncmlkXzIkY3RsMDAkUmFkaW9CdXR0b242BR5kYXRhX2dyaWRfMiRjdGwwMCRSYWRpb0J1dHRvbjYFHmRhdGFfZ3JpZF8yJGN0bDAwJFJhZGlvQnV0dG9uNwUeZGF0YV9ncmlkXzIkY3RsMDAkUmFkaW9CdXR0b243BR5kYXRhX2dyaWRfMiRjdGwwMSRSYWRpb0J1dHRvbjUFHmRhdGFfZ3JpZF8yJGN0bDAxJFJhZGlvQnV0dG9uNQUeZGF0YV9ncmlkXzIkY3RsMDEkUmFkaW9CdXR0b242BR5kYXRhX2dyaWRfMiRjdGwwMSRSYWRpb0J1dHRvbjYFHmRhdGFfZ3JpZF8yJGN0bDAxJFJhZGlvQnV0dG9uNwUeZGF0YV9ncmlkXzIkY3RsMDEkUmFkaW9CdXR0b243BR5kYXRhX2dyaWRfMiRjdGwwMiRSYWRpb0J1dHRvbjUFHmRhdGFfZ3JpZF8yJGN0bDAyJFJhZGlvQnV0dG9uNQUeZGF0YV9ncmlkXzIkY3RsMDIkUmFkaW9CdXR0b242BR5kYXRhX2dyaWRfMiRjdGwwMiRSYWRpb0J1dHRvbjYFHmRhdGFfZ3JpZF8yJGN0bDAyJFJhZGlvQnV0dG9uNwUeZGF0YV9ncmlkXzIkY3RsMDIkUmFkaW9CdXR0b243BR5kYXRhX2dyaWRfMiRjdGwwMyRSYWRpb0J1dHRvbjUFHmRhdGFfZ3JpZF8yJGN0bDAzJFJhZGlvQnV0dG9uNQUeZGF0YV9ncmlkXzIkY3RsMDMkUmFkaW9CdXR0b242BR5kYXRhX2dyaWRfMiRjdGwwMyRSYWRpb0J1dHRvbjYFHmRhdGFfZ3JpZF8yJGN0bDAzJFJhZGlvQnV0dG9uNwUeZGF0YV9ncmlkXzIkY3RsMDMkUmFkaW9CdXR0b243BR5kYXRhX2dyaWRfMiRjdGwwNCRSYWRpb0J1dHRvbjUFHmRhdGFfZ3JpZF8yJGN0bDA0JFJhZGlvQnV0dG9uNQUeZGF0YV9ncmlkXzIkY3RsMDQkUmFkaW9CdXR0b242BR5kYXRhX2dyaWRfMiRjdGwwNCRSYWRpb0J1dHRvbjYFHmRhdGFfZ3JpZF8yJGN0bDA0JFJhZGlvQnV0dG9uNwUeZGF0YV9ncmlkXzIkY3RsMDQkUmFkaW9CdXR0b243BR5kYXRhX2dyaWRfMyRjdGwwMCRSYWRpb0J1dHRvbjkFHmRhdGFfZ3JpZF8zJGN0bDAwJFJhZGlvQnV0dG9uOQUfZGF0YV9ncmlkXzMkY3RsMDAkUmFkaW9CdXR0b24xMAUfZGF0YV9ncmlkXzMkY3RsMDAkUmFkaW9CdXR0b24xMAUfZGF0YV9ncmlkXzMkY3RsMDAkUmFkaW9CdXR0b24xMQUfZGF0YV9ncmlkXzMkY3RsMDAkUmFkaW9CdXR0b24xMQUeZGF0YV9ncmlkXzMkY3RsMDEkUmFkaW9CdXR0b245BR5kYXRhX2dyaWRfMyRjdGwwMSRSYWRpb0J1dHRvbjkFH2RhdGFfZ3JpZF8zJGN0bDAxJFJhZGlvQnV0dG9uMTAFH2RhdGFfZ3JpZF8zJGN0bDAxJFJhZGlvQnV0dG9uMTAFH2RhdGFfZ3JpZF8zJGN0bDAxJFJhZGlvQnV0dG9uMTEFH2RhdGFfZ3JpZF8zJGN0bDAxJFJhZGlvQnV0dG9uMTEFHmRhdGFfZ3JpZF8zJGN0bDAyJFJhZGlvQnV0dG9uOQUeZGF0YV9ncmlkXzMkY3RsMDIkUmFkaW9CdXR0b245BR9kYXRhX2dyaWRfMyRjdGwwMiRSYWRpb0J1dHRvbjEwBR9kYXRhX2dyaWRfMyRjdGwwMiRSYWRpb0J1dHRvbjEwBR9kYXRhX2dyaWRfMyRjdGwwMiRSYWRpb0J1dHRvbjExBR9kYXRhX2dyaWRfMyRjdGwwMiRSYWRpb0J1dHRvbjExBR9kYXRhX2dyaWRfNCRjdGwwMCRSYWRpb0J1dHRvbjEzBR9kYXRhX2dyaWRfNCRjdGwwMCRSYWRpb0J1dHRvbjEzBR9kYXRhX2dyaWRfNCRjdGwwMCRSYWRpb0J1dHRvbjE0BR9kYXRhX2dyaWRfNCRjdGwwMCRSYWRpb0J1dHRvbjE0BR9kYXRhX2dyaWRfNCRjdGwwMCRSYWRpb0J1dHRvbjE1BR9kYXRhX2dyaWRfNCRjdGwwMCRSYWRpb0J1dHRvbjE1BR9kYXRhX2dyaWRfNCRjdGwwMSRSYWRpb0J1dHRvbjEzBR9kYXRhX2dyaWRfNCRjdGwwMSRSYWRpb0J1dHRvbjEzBR9kYXRhX2dyaWRfNCRjdGwwMSRSYWRpb0J1dHRvbjE0BR9kYXRhX2dyaWRfNCRjdGwwMSRSYWRpb0J1dHRvbjE0BR9kYXRhX2dyaWRfNCRjdGwwMSRSYWRpb0J1dHRvbjE1BR9kYXRhX2dyaWRfNCRjdGwwMSRSYWRpb0J1dHRvbjE1BR9kYXRhX2dyaWRfNCRjdGwwMiRSYWRpb0J1dHRvbjEzBR9kYXRhX2dyaWRfNCRjdGwwMiRSYWRpb0J1dHRvbjEzBR9kYXRhX2dyaWRfNCRjdGwwMiRSYWRpb0J1dHRvbjE0BR9kYXRhX2dyaWRfNCRjdGwwMiRSYWRpb0J1dHRvbjE0BR9kYXRhX2dyaWRfNCRjdGwwMiRSYWRpb0J1dHRvbjE1BR9kYXRhX2dyaWRfNCRjdGwwMiRSYWRpb0J1dHRvbjE1BR9kYXRhX2dyaWRfNCRjdGwwMyRSYWRpb0J1dHRvbjEzBR9kYXRhX2dyaWRfNCRjdGwwMyRSYWRpb0J1dHRvbjEzBR9kYXRhX2dyaWRfNCRjdGwwMyRSYWRpb0J1dHRvbjE0BR9kYXRhX2dyaWRfNCRjdGwwMyRSYWRpb0J1dHRvbjE0BR9kYXRhX2dyaWRfNCRjdGwwMyRSYWRpb0J1dHRvbjE1BR9kYXRhX2dyaWRfNCRjdGwwMyRSYWRpb0J1dHRvbjE1BR9kYXRhX2dyaWRfNSRjdGwwMCRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwMCRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwMCRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwMCRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwMCRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwMCRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwMSRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwMSRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwMSRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwMSRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwMSRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwMSRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwMiRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwMiRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwMiRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwMiRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwMiRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwMiRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwMyRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwMyRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwMyRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwMyRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwMyRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwMyRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwNCRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwNCRSYWRpb0J1dHRvbjE3BR9kYXRhX2dyaWRfNSRjdGwwNCRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwNCRSYWRpb0J1dHRvbjE4BR9kYXRhX2dyaWRfNSRjdGwwNCRSYWRpb0J1dHRvbjE5BR9kYXRhX2dyaWRfNSRjdGwwNCRSYWRpb0J1dHRvbjE5BQhjaGVja19idLngOIYdbY+rAt0U4HNvz5MOT20S">
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWSgKTp5HCBQLCgPTqDwKU68nZCgK7q7GGCALSn6KvDwLSn9aLBgLSn/rmDgKf6aKvDwKf6daLBgKf6frmDgLczqKvDwLcztaLBgLczvrmDgKR2KKvDwKR2NaLBgKR2PrmDgLevaKvDwLevdaLBgLevfrmDgKbh6KvDwKbh9aLBgKbh/rmDgKD2+eABAKD2/PvDAKD29/KBwLAouSABALAovDvDALAotzKBwKNiuSABAKNivDvDAKNitzKBwLCleSABALClfDvDALCldzKBwKP+eeABAKP+fPvDAKP+d/KBwKY7dPoDgKxrrvjCwKyrrvjCwKl9NPoDgKMt7vjCwKPt7vjCwLi3dPoDgLLnrvjCwLInrvjCwL51uqHBQLk1uqHBQLn1uqHBQK23OqHBQKr3OqHBQKo3OqHBQLzh+qHBQLuh+qHBQLth+qHBQK4jeqHBQKljeqHBQKmjeqHBQKCpIzZBAKHpIzZBAKEpIzZBALHrYzZBALCrYzZBALBrYzZBAKElYzZBAKBlYzZBAKClYzZBALB4o3ZBALE4o3ZBALH4o3ZBAKGxozZBAKDxozZBAKAxozZBAKTlIm+BCsexJmYyfV6sDHtVTJvriErxvD2">
+</div>
+    
+    <div>
+        <table width="1006" align="center">
+            <tbody><tr>
+                <td colspan="2" style="height:20px;">
+                  <img src="./biao.jpg" width="19" style="height:16px;"> <font style="color:#00A4D4;font-size: 12px;">您现在的位置 &gt;<a href="http://www.cn0-6.com/ceping.aspx" style="color:#00A4D4;font-size: 12px;">在线测评</a> &gt;智力测评</font><span id="Literal1" style="display: none;"></span><span id="Label1" style="display: none;">测试</span></td>
+                <td style="height:20px;">&nbsp;
+                    </td>
+            </tr>
+            <tr>
+                <td width="10">&nbsp;
+                    </td>
+                <td valign="top" style="height:100%;">
+<div id="test_list">
+	
+<div class="News_tab"><div class="News_tab_title_bg">
+<div class="News_tab_title">
+<ul>
+<li><a onclick="javascript:easytabs(&#39;1&#39;, &#39;1&#39;);" onfocus="javascript:easytabs(&#39;1&#39;, &#39;1&#39;);" id="tablink1" style="cursor:hand;" class="tabactive">逻辑能力</a></li>
+<li><a onclick="javascript:easytabs(&#39;1&#39;, &#39;2&#39;);" onfocus="javascript:easytabs(&#39;1&#39;, &#39;2&#39;);" id="tablink2" style="cursor:hand;" class="tab2">语言能力</a></li>
+<li><a onclick="javascript:easytabs(&#39;1&#39;, &#39;3&#39;);" onfocus="javascript:easytabs(&#39;1&#39;, &#39;3&#39;);" id="tablink3" style="cursor:hand;" class="tab3">身体运动</a></li>
+<li><a onclick="javascript:easytabs(&#39;1&#39;, &#39;4&#39;);" onfocus="javascript:easytabs(&#39;1&#39;, &#39;4&#39;);" id="tablink4" style="cursor:hand;" class="tab4">理解能力</a></li>
+<li><a onclick="javascript:easytabs(&#39;1&#39;, &#39;5&#39;);" onfocus="javascript:easytabs(&#39;1&#39;, &#39;5&#39;);" id="tablink5" style="cursor:hand;" class="tab5">社交能力</a></li>
+</ul>
+</div></div>
+<div class="News_tab_content"><div id="bb_age_date"><table width="100%"> <tbody><tr><td colspan="3" style="height:15px;"></td></tr><tr>
+                <td class="heizi" width="30%" align="right">
+                    宝宝生日</td>
+                <td align="right" class="heizi" width="16%">
+                    <input name="date_sel" type="text" id="date_sel" class="Wdate" onfocus="javascript:WdatePicker({isShowClear:false,readOnly:true});" value="2018-09-12"></td>
+                <td align="left" class="heizi" width="35%">
+                    <input type="submit" name="star_test" value="开始测试" id="star_test"><input type="submit" name="Button2" value="Button" id="Button2" style="display: none;"></td></tr>
+    
+    <tr>
+        <td align="center" class="heizi" colspan="3">
+          <div id="tabcontent1" style="display: block; height: 100%;">
+<ul>
+              <li class="FONT"><table style="width: 100%;height:100%;"><tbody><tr><td><span><table id="data_grid_1" class="font_class" cellspacing="0" border="0" style="height:100%;width:100%;border-collapse:collapse;">
+		<tbody><tr>
+			<td>
+                         <table style="width: 100%;height:100%; background-color:White;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                             <tbody><tr>
+                                 <td style="background-color:#FFDEAD;" class="font_class" align="center" width="4%">1
+
+                                 </td>
+                                 <td style="background-color:#FFDEAD; height:20px;" class="font_class" align="left" width="96%" colspan="2">
+                                     <font class="hongzi">贴脸谱（头发、眉毛、眼睛、鼻子、嘴唇、耳朵），贴对几种                                                                                                                                                                             </font></td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="center" width="4%" rowspan="3">
+                                 </td>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;A&nbsp;
+                                     <input id="data_grid_1_ctl00_RadioButton1" type="radio" name="data_grid_1$ctl00$test_groud" value="RadioButton1" onclick="font_show(&#39;a&#39;,455,&#39;6种&#39;);"><label for="data_grid_1_ctl00_RadioButton1">6种                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                     &nbsp;B&nbsp;
+                                     <input id="data_grid_1_ctl00_RadioButton2" type="radio" name="data_grid_1$ctl00$test_groud" value="RadioButton2" onclick="font_show(&#39;b&#39;,455,&#39;5种&#39;);"><label for="data_grid_1_ctl00_RadioButton2">5种                            </label>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;C&nbsp;
+                                     <input id="data_grid_1_ctl00_RadioButton3" type="radio" name="data_grid_1$ctl00$test_groud" value="RadioButton3" onclick="font_show(&#39;c&#39;,455,&#39;3种以下&#39;);"><label for="data_grid_1_ctl00_RadioButton3">3种以下                          </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                   
+                                 </td>
+                             </tr>
+                             
+                         </tbody></table>
+                     </td>
+		</tr><tr>
+			<td>
+                         <table style="width: 100%;height:100%; background-color:White;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                             <tbody><tr>
+                                 <td style="background-color:#FFDEAD;" class="font_class" align="center" width="4%">2
+
+                                 </td>
+                                 <td style="background-color:#FFDEAD; height:20px;" class="font_class" align="left" width="96%" colspan="2">
+                                     <font class="hongzi">学认蓝色已认识几种颜色                                                                                                                                                                                             </font></td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="center" width="4%" rowspan="3">
+                                 </td>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;A&nbsp;
+                                     <input id="data_grid_1_ctl01_RadioButton1" type="radio" name="data_grid_1$ctl01$test_groud" value="RadioButton1" onclick="font_show(&#39;a&#39;,454,&#39;8种（包括深浅色）&#39;);"><label for="data_grid_1_ctl01_RadioButton1">8种（包括深浅色）                     </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                     &nbsp;B&nbsp;
+                                     <input id="data_grid_1_ctl01_RadioButton2" type="radio" name="data_grid_1$ctl01$test_groud" value="RadioButton2" onclick="font_show(&#39;b&#39;,454,&#39;7种&#39;);"><label for="data_grid_1_ctl01_RadioButton2">7种                            </label>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;C&nbsp;
+                                     <input id="data_grid_1_ctl01_RadioButton3" type="radio" name="data_grid_1$ctl01$test_groud" value="RadioButton3" onclick="font_show(&#39;c&#39;,454,&#39;5种以下&#39;);"><label for="data_grid_1_ctl01_RadioButton3">5种以下                          </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                   
+                                 </td>
+                             </tr>
+                             
+                         </tbody></table>
+                     </td>
+		</tr><tr>
+			<td>
+                         <table style="width: 100%;height:100%; background-color:White;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                             <tbody><tr>
+                                 <td style="background-color:#FFDEAD;" class="font_class" align="center" width="4%">3
+
+                                 </td>
+                                 <td style="background-color:#FFDEAD; height:20px;" class="font_class" align="left" width="96%" colspan="2">
+                                     <font class="hongzi">积木搭门楼和金字塔能搭上3块下2块的门楼与3层金字塔、4层金字塔中的几种                                                                                                                                                                    </font></td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="center" width="4%" rowspan="3">
+                                 </td>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;A&nbsp;
+                                     <input id="data_grid_1_ctl02_RadioButton1" type="radio" name="data_grid_1$ctl02$test_groud" value="RadioButton1" onclick="font_show(&#39;a&#39;,453,&#39;3种&#39;);"><label for="data_grid_1_ctl02_RadioButton1">3种                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                     &nbsp;B&nbsp;
+                                     <input id="data_grid_1_ctl02_RadioButton2" type="radio" name="data_grid_1$ctl02$test_groud" value="RadioButton2" onclick="font_show(&#39;b&#39;,453,&#39;2种&#39;);"><label for="data_grid_1_ctl02_RadioButton2">2种                            </label>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;C&nbsp;
+                                     <input id="data_grid_1_ctl02_RadioButton3" type="radio" name="data_grid_1$ctl02$test_groud" value="RadioButton3" onclick="font_show(&#39;c&#39;,453,&#39;1种&#39;);"><label for="data_grid_1_ctl02_RadioButton3">1种                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                   
+                                 </td>
+                             </tr>
+                             
+                         </tbody></table>
+                     </td>
+		</tr><tr>
+			<td>
+                         <table style="width: 100%;height:100%; background-color:White;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                             <tbody><tr>
+                                 <td style="background-color:#FFDEAD;" class="font_class" align="center" width="4%">4
+
+                                 </td>
+                                 <td style="background-color:#FFDEAD; height:20px;" class="font_class" align="left" width="96%" colspan="2">
+                                     <font class="hongzi">上紧及拧开螺丝使用手、螺丝锥、湿布中的几种方法                                                                                                                                                                                 </font></td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="center" width="4%" rowspan="3">
+                                 </td>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;A&nbsp;
+                                     <input id="data_grid_1_ctl03_RadioButton1" type="radio" name="data_grid_1$ctl03$test_groud" value="RadioButton1" onclick="font_show(&#39;a&#39;,452,&#39;3种&#39;);"><label for="data_grid_1_ctl03_RadioButton1">3种                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                     &nbsp;B&nbsp;
+                                     <input id="data_grid_1_ctl03_RadioButton2" type="radio" name="data_grid_1$ctl03$test_groud" value="RadioButton2" onclick="font_show(&#39;b&#39;,452,&#39;2种&#39;);"><label for="data_grid_1_ctl03_RadioButton2">2种                            </label>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;C&nbsp;
+                                     <input id="data_grid_1_ctl03_RadioButton3" type="radio" name="data_grid_1$ctl03$test_groud" value="RadioButton3" onclick="font_show(&#39;c&#39;,452,&#39;1种&#39;);"><label for="data_grid_1_ctl03_RadioButton3">1种                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                   
+                                 </td>
+                             </tr>
+                             
+                         </tbody></table>
+                     </td>
+		</tr><tr>
+			<td>
+                         <table style="width: 100%;height:100%; background-color:White;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                             <tbody><tr>
+                                 <td style="background-color:#FFDEAD;" class="font_class" align="center" width="4%">5
+
+                                 </td>
+                                 <td style="background-color:#FFDEAD; height:20px;" class="font_class" align="left" width="96%" colspan="2">
+                                     <font class="hongzi">学写数字                                                                                                                                                                                                    </font></td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="center" width="4%" rowspan="3">
+                                 </td>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;A&nbsp;
+                                     <input id="data_grid_1_ctl04_RadioButton1" type="radio" name="data_grid_1$ctl04$test_groud" value="RadioButton1" onclick="font_show(&#39;a&#39;,451,&#39;4个&#39;);"><label for="data_grid_1_ctl04_RadioButton1">4个                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                     &nbsp;B&nbsp;
+                                     <input id="data_grid_1_ctl04_RadioButton2" type="radio" name="data_grid_1$ctl04$test_groud" value="RadioButton2" onclick="font_show(&#39;b&#39;,451,&#39;3个&#39;);"><label for="data_grid_1_ctl04_RadioButton2">3个                            </label>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;C&nbsp;
+                                     <input id="data_grid_1_ctl04_RadioButton3" type="radio" name="data_grid_1$ctl04$test_groud" value="RadioButton3" onclick="font_show(&#39;c&#39;,451,&#39;1个&#39;);"><label for="data_grid_1_ctl04_RadioButton3">1个                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                   
+                                 </td>
+                             </tr>
+                             
+                         </tbody></table>
+                     </td>
+		</tr><tr>
+			<td>
+                         <table style="width: 100%;height:100%; background-color:White;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                             <tbody><tr>
+                                 <td style="background-color:#FFDEAD;" class="font_class" align="center" width="4%">6
+
+                                 </td>
+                                 <td style="background-color:#FFDEAD; height:20px;" class="font_class" align="left" width="96%" colspan="2">
+                                     <font class="hongzi">排数字会用几种方法排数字（1～10，从任何一个数起排2个、排3个、排4个、排5个连续的数）                                                                                                                                                           </font></td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="center" width="4%" rowspan="3">
+                                 </td>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;A&nbsp;
+                                     <input id="data_grid_1_ctl05_RadioButton1" type="radio" name="data_grid_1$ctl05$test_groud" value="RadioButton1" onclick="font_show(&#39;a&#39;,450,&#39;4种&#39;);"><label for="data_grid_1_ctl05_RadioButton1">4种                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                     &nbsp;B&nbsp;
+                                     <input id="data_grid_1_ctl05_RadioButton2" type="radio" name="data_grid_1$ctl05$test_groud" value="RadioButton2" onclick="font_show(&#39;b&#39;,450,&#39;3种&#39;);"><label for="data_grid_1_ctl05_RadioButton2">3种                            </label>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="background-color:#FFEFD5;height:20px;" class="font_class" align="left" width="48%">
+                                     &nbsp;C&nbsp;
+                                     <input id="data_grid_1_ctl05_RadioButton3" type="radio" name="data_grid_1$ctl05$test_groud" value="RadioButton3" onclick="font_show(&#39;c&#39;,450,&#39;1种&#39;);"><label for="data_grid_1_ctl05_RadioButton3">1种                            </label>
+                                 </td>
+                                 <td style="background-color:#FFEFD5;" class="font_class" align="left" width="48%">
+                                   
+                                 </td>
+                             </tr>
+                             
+                         </tbody></table>
+                     </td>
+		</tr>
+	</tbody></table></span></td></tr>
+                 
+                 <tr><td align="center"><div id="No1">
+		<img src="./next_title.gif" alt="点击下一题" onclick="javascript:start_autochange();" style="cursor:hand;">
+	</div></td></tr>
+                 </tbody></table></li>
+
+                 </ul>
+                 
+          </div>
+
+           <div id="tabcontent2" style="display:none;height:100%;">
+<ul>
+              <li class="FONT"><table style="width: 100%;"><tbody><tr><td><span><table id="data_grid_2" class="font_class" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+		<tbody><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">1
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">宝宝会从1数到10吗？                                                                                                                                                                                             </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_2_ctl00_RadioButton5" type="radio" name="data_grid_2$ctl00$test_groud" value="RadioButton5" onclick="font_show(&#39;a&#39;,460,&#39;能，而且较流利&#39;);"><label for="data_grid_2_ctl00_RadioButton5">能，而且较流利                       </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_2_ctl00_RadioButton6" type="radio" name="data_grid_2$ctl00$test_groud" value="RadioButton6" onclick="font_show(&#39;b&#39;,460,&#39;能，不是很流利&#39;);"><label for="data_grid_2_ctl00_RadioButton6">能，不是很流利                       </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                        <input id="data_grid_2_ctl00_RadioButton7" type="radio" name="data_grid_2$ctl00$test_groud" value="RadioButton7" onclick="font_show(&#39;c&#39;,460,&#39;不能&#39;);"><label for="data_grid_2_ctl00_RadioButton7">不能                            </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+                               
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">2
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">宝宝喜欢问问题吗？例如：问“这是什么？”、“那是什么”？                                                                                                                                                                            </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_2_ctl01_RadioButton5" type="radio" name="data_grid_2$ctl01$test_groud" value="RadioButton5" onclick="font_show(&#39;a&#39;,459,&#39;经常问&#39;);"><label for="data_grid_2_ctl01_RadioButton5">经常问                           </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_2_ctl01_RadioButton6" type="radio" name="data_grid_2$ctl01$test_groud" value="RadioButton6" onclick="font_show(&#39;b&#39;,459,&#39;偶尔问&#39;);"><label for="data_grid_2_ctl01_RadioButton6">偶尔问                           </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                        <input id="data_grid_2_ctl01_RadioButton7" type="radio" name="data_grid_2$ctl01$test_groud" value="RadioButton7" onclick="font_show(&#39;c&#39;,459,&#39;从来不问&#39;);"><label for="data_grid_2_ctl01_RadioButton7">从来不问                          </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+                               
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">3
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">学唱儿童歌曲                                                                                                                                                                                                  </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_2_ctl02_RadioButton5" type="radio" name="data_grid_2$ctl02$test_groud" value="RadioButton5" onclick="font_show(&#39;a&#39;,458,&#39;唱3首&#39;);"><label for="data_grid_2_ctl02_RadioButton5">唱3首                           </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_2_ctl02_RadioButton6" type="radio" name="data_grid_2$ctl02$test_groud" value="RadioButton6" onclick="font_show(&#39;b&#39;,458,&#39;唱2首&#39;);"><label for="data_grid_2_ctl02_RadioButton6">唱2首                           </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                        <input id="data_grid_2_ctl02_RadioButton7" type="radio" name="data_grid_2$ctl02$test_groud" value="RadioButton7" onclick="font_show(&#39;c&#39;,458,&#39;唱1首或不会&#39;);"><label for="data_grid_2_ctl02_RadioButton7">唱1首或不会                        </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+                               
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">4
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">说出职业称呼能说出几种职业称呼                                                                                                                                                                                         </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_2_ctl03_RadioButton5" type="radio" name="data_grid_2$ctl03$test_groud" value="RadioButton5" onclick="font_show(&#39;a&#39;,457,&#39;6种&#39;);"><label for="data_grid_2_ctl03_RadioButton5">6种                            </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_2_ctl03_RadioButton6" type="radio" name="data_grid_2$ctl03$test_groud" value="RadioButton6" onclick="font_show(&#39;b&#39;,457,&#39;5种&#39;);"><label for="data_grid_2_ctl03_RadioButton6">5种                            </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                        <input id="data_grid_2_ctl03_RadioButton7" type="radio" name="data_grid_2$ctl03$test_groud" value="RadioButton7" onclick="font_show(&#39;c&#39;,457,&#39;少于4种&#39;);"><label for="data_grid_2_ctl03_RadioButton7">少于4种                          </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+                               
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">5
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">问“你”时，用“我”回答                                                                                                                                                                                            </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_2_ctl04_RadioButton5" type="radio" name="data_grid_2$ctl04$test_groud" value="RadioButton5" onclick="font_show(&#39;a&#39;,456,&#39;立即用“我”回答&#39;);"><label for="data_grid_2_ctl04_RadioButton5">立即用“我”回答                      </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_2_ctl04_RadioButton6" type="radio" name="data_grid_2$ctl04$test_groud" value="RadioButton6" onclick="font_show(&#39;b&#39;,456,&#39;想后会用“我”回答&#39;);"><label for="data_grid_2_ctl04_RadioButton6">想后会用“我”回答                     </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                        <input id="data_grid_2_ctl04_RadioButton7" type="radio" name="data_grid_2$ctl04$test_groud" value="RadioButton7" onclick="font_show(&#39;c&#39;,456,&#39;不会，用手拍胸表示&#39;);"><label for="data_grid_2_ctl04_RadioButton7">不会，用手拍胸表示                     </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+                               
+                </tbody></table>
+                                </td>
+		</tr>
+	</tbody></table></span></td></tr>
+                 
+                 <tr><td align="center"><div id="No2">
+		<img src="./next_title.gif" alt="点击下一题" onclick="javascript:start_autochange();" style="cursor:hand;">
+	</div></td></tr>
+                 </tbody></table></li>
+                                
+                 </ul>
+                
+          </div>
+
+           <div id="tabcontent3" style="display:none;height:100%;">
+<ul>
+              <li class="FONT"><table style="width: 100%;"><tbody><tr><td><span><table id="data_grid_3" class="font_class" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+		<tbody><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%" height="25px">1
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                      <font class="hongzi">画圆圈能画出几个封口的圆形                                                                                                                                                                                           </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_3_ctl00_RadioButton9" type="radio" name="data_grid_3$ctl00$test_groud" value="RadioButton9" onclick="font_show(&#39;a&#39;,463,&#39;4个&#39;);"><label for="data_grid_3_ctl00_RadioButton9">4个                            </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_3_ctl00_RadioButton10" type="radio" name="data_grid_3$ctl00$test_groud" value="RadioButton10" onclick="font_show(&#39;b&#39;,463,&#39;3个&#39;);"><label for="data_grid_3_ctl00_RadioButton10">3个                            </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_3_ctl00_RadioButton11" type="radio" name="data_grid_3$ctl00$test_groud" value="RadioButton11" onclick="font_show(&#39;c&#39;,463,&#39;1-2个&#39;);"><label for="data_grid_3_ctl00_RadioButton11">1-2个                          </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         
+                         </td>
+                </tr>
+                             
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%" height="25px">2
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                      <font class="hongzi">接球接住距离几米远抛来的球                                                                                                                                                                                           </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_3_ctl01_RadioButton9" type="radio" name="data_grid_3$ctl01$test_groud" value="RadioButton9" onclick="font_show(&#39;a&#39;,462,&#39;2米&#39;);"><label for="data_grid_3_ctl01_RadioButton9">2米                            </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_3_ctl01_RadioButton10" type="radio" name="data_grid_3$ctl01$test_groud" value="RadioButton10" onclick="font_show(&#39;b&#39;,462,&#39;1.5米&#39;);"><label for="data_grid_3_ctl01_RadioButton10">1.5米                          </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_3_ctl01_RadioButton11" type="radio" name="data_grid_3$ctl01$test_groud" value="RadioButton11" onclick="font_show(&#39;c&#39;,462,&#39;0.5米-1米&#39;);"><label for="data_grid_3_ctl01_RadioButton11">0.5米-1米                       </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         
+                         </td>
+                </tr>
+                             
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%" height="25px">3
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                      <font class="hongzi">走平衡木能做几种动作（头上有书，双手提篮，双手拿铃铛，做杂技动作）                                                                                                                                                                       </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_3_ctl02_RadioButton9" type="radio" name="data_grid_3$ctl02$test_groud" value="RadioButton9" onclick="font_show(&#39;a&#39;,461,&#39;3种&#39;);"><label for="data_grid_3_ctl02_RadioButton9">3种                            </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_3_ctl02_RadioButton10" type="radio" name="data_grid_3$ctl02$test_groud" value="RadioButton10" onclick="font_show(&#39;b&#39;,461,&#39;2种&#39;);"><label for="data_grid_3_ctl02_RadioButton10">2种                            </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_3_ctl02_RadioButton11" type="radio" name="data_grid_3$ctl02$test_groud" value="RadioButton11" onclick="font_show(&#39;c&#39;,461,&#39;0-1种&#39;);"><label for="data_grid_3_ctl02_RadioButton11">0-1种                          </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         
+                         </td>
+                </tr>
+                             
+                </tbody></table>
+                                </td>
+		</tr>
+	</tbody></table></span></td></tr>
+                 
+                 <tr><td align="center"><div id="No3">
+		<img src="./next_title.gif" alt="点击下一题" onclick="javascript:start_autochange();" style="cursor:hand;">
+	</div></td></tr>
+                 </tbody></table></li>
+                      </ul>
+                      
+          </div>
+                     <div id="tabcontent4" style="display:none;height:100%;">
+<ul>
+              <li class="FONT"><table style="width: 100%;"><tbody><tr><td><span><table id="data_grid_4" class="font_class" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+		<tbody><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">1
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">给宝宝讲完一个故事后，宝宝能不能记住故事中一个角色的名字                                                                                                                                                                            </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_4_ctl00_RadioButton13" type="radio" name="data_grid_4$ctl00$test_groud" value="RadioButton13" onclick="font_show(&#39;a&#39;,467,&#39;能&#39;);"><label for="data_grid_4_ctl00_RadioButton13">能                             </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_4_ctl00_RadioButton14" type="radio" name="data_grid_4$ctl00$test_groud" value="RadioButton14" onclick="font_show(&#39;b&#39;,467,&#39;偶尔&#39;);"><label for="data_grid_4_ctl00_RadioButton14">偶尔                            </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_4_ctl00_RadioButton15" type="radio" name="data_grid_4$ctl00$test_groud" value="RadioButton15" onclick="font_show(&#39;c&#39;,467,&#39;不能&#39;);"><label for="data_grid_4_ctl00_RadioButton15">不能                            </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+               
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">2
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">妈妈假装把手指划破，对宝宝说：妈妈的手破了，不能沾水。宝宝现在长大了，要帮妈妈，饭前可以自己去洗手吗                                                                                                                                                      </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_4_ctl01_RadioButton13" type="radio" name="data_grid_4$ctl01$test_groud" value="RadioButton13" onclick="font_show(&#39;a&#39;,466,&#39;会自己洗手&#39;);"><label for="data_grid_4_ctl01_RadioButton13">会自己洗手                         </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_4_ctl01_RadioButton14" type="radio" name="data_grid_4$ctl01$test_groud" value="RadioButton14" onclick="font_show(&#39;b&#39;,466,&#39;偶尔&#39;);"><label for="data_grid_4_ctl01_RadioButton14">偶尔                            </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_4_ctl01_RadioButton15" type="radio" name="data_grid_4$ctl01$test_groud" value="RadioButton15" onclick="font_show(&#39;c&#39;,466,&#39;不会&#39;);"><label for="data_grid_4_ctl01_RadioButton15">不会                            </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+               
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">3
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">宝宝能自行对“ ** 在哪里？”这问题作出正确的反应（即利用视觉搜索房间，并指出物件的位置）                                                                                                                                                          </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_4_ctl02_RadioButton13" type="radio" name="data_grid_4$ctl02$test_groud" value="RadioButton13" onclick="font_show(&#39;a&#39;,465,&#39;能并且正确找出&#39;);"><label for="data_grid_4_ctl02_RadioButton13">能并且正确找出                       </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_4_ctl02_RadioButton14" type="radio" name="data_grid_4$ctl02$test_groud" value="RadioButton14" onclick="font_show(&#39;b&#39;,465,&#39;能找出，时间长一些&#39;);"><label for="data_grid_4_ctl02_RadioButton14">能找出，时间长一些                     </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_4_ctl02_RadioButton15" type="radio" name="data_grid_4$ctl02$test_groud" value="RadioButton15" onclick="font_show(&#39;c&#39;,465,&#39;没有任何反应&#39;);"><label for="data_grid_4_ctl02_RadioButton15">没有任何反应                        </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+               
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">4
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                       <font class="hongzi">宝宝对“停（停止）”和“行（走）”的指令作出正确的反应                                                                                                                                                                             </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_4_ctl03_RadioButton13" type="radio" name="data_grid_4$ctl03$test_groud" value="RadioButton13" onclick="font_show(&#39;a&#39;,464,&#39;能够正确的作出行为&#39;);"><label for="data_grid_4_ctl03_RadioButton13">能够正确的作出行为                     </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_4_ctl03_RadioButton14" type="radio" name="data_grid_4$ctl03$test_groud" value="RadioButton14" onclick="font_show(&#39;b&#39;,464,&#39;偶尔会出错&#39;);"><label for="data_grid_4_ctl03_RadioButton14">偶尔会出错                         </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_4_ctl03_RadioButton15" type="radio" name="data_grid_4$ctl03$test_groud" value="RadioButton15" onclick="font_show(&#39;c&#39;,464,&#39;不能&#39;);"><label for="data_grid_4_ctl03_RadioButton15">不能                            </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+               
+                </tbody></table>
+                                </td>
+		</tr>
+	</tbody></table></span></td></tr>
+                 
+                 <tr><td align="center"><div id="No4">
+		<img src="./next_title.gif" alt="点击下一题" onclick="javascript:start_autochange();" style="cursor:hand;">
+	</div></td></tr>
+                 </tbody></table></li>
+                     </ul>
+                    
+                     
+          </div>
+
+           <div id="tabcontent5" style="display:none;height:100%;">
+<ul>
+              <li class="FONT"><table style="width: 100%;"><tbody><tr><td><span><table id="data_grid_5" class="font_class" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+		<tbody><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">1
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                      <font class="hongzi">宝宝有一定的是非观念吗？例如：宝宝知道“打人不对”、“吵架不好”等                                                                                                                                                                       </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_5_ctl00_RadioButton17" type="radio" name="data_grid_5$ctl00$test_groud" value="RadioButton17" onclick="font_show(&#39;a&#39;,472,&#39;有&#39;);"><label for="data_grid_5_ctl00_RadioButton17">有                             </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_5_ctl00_RadioButton18" type="radio" name="data_grid_5$ctl00$test_groud" value="RadioButton18" onclick="font_show(&#39;b&#39;,472,&#39;有，但比较模糊&#39;);"><label for="data_grid_5_ctl00_RadioButton18">有，但比较模糊                       </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_5_ctl00_RadioButton19" type="radio" name="data_grid_5$ctl00$test_groud" value="RadioButton19" onclick="font_show(&#39;c&#39;,472,&#39;没有&#39;);"><label for="data_grid_5_ctl00_RadioButton19">没有                            </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">2
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                      <font class="hongzi">宝宝有一定的自理能力吗？比如会自己吃饭，自己洗脸，自己脱衣服等。                                                                                                                                                                        </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_5_ctl01_RadioButton17" type="radio" name="data_grid_5$ctl01$test_groud" value="RadioButton17" onclick="font_show(&#39;a&#39;,471,&#39;基本可以自己解决&#39;);"><label for="data_grid_5_ctl01_RadioButton17">基本可以自己解决                      </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_5_ctl01_RadioButton18" type="radio" name="data_grid_5$ctl01$test_groud" value="RadioButton18" onclick="font_show(&#39;b&#39;,471,&#39;可以做到基中一两样&#39;);"><label for="data_grid_5_ctl01_RadioButton18">可以做到基中一两样                     </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_5_ctl01_RadioButton19" type="radio" name="data_grid_5$ctl01$test_groud" value="RadioButton19" onclick="font_show(&#39;c&#39;,471,&#39;不能&#39;);"><label for="data_grid_5_ctl01_RadioButton19">不能                            </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">3
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                      <font class="hongzi">宝宝喜欢跟在比自己年龄大的小朋友后面走着玩吗？                                                                                                                                                                                 </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_5_ctl02_RadioButton17" type="radio" name="data_grid_5$ctl02$test_groud" value="RadioButton17" onclick="font_show(&#39;a&#39;,470,&#39;喜欢，而且经常&#39;);"><label for="data_grid_5_ctl02_RadioButton17">喜欢，而且经常                       </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_5_ctl02_RadioButton18" type="radio" name="data_grid_5$ctl02$test_groud" value="RadioButton18" onclick="font_show(&#39;b&#39;,470,&#39;偶尔&#39;);"><label for="data_grid_5_ctl02_RadioButton18">偶尔                            </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_5_ctl02_RadioButton19" type="radio" name="data_grid_5$ctl02$test_groud" value="RadioButton19" onclick="font_show(&#39;c&#39;,470,&#39;不喜欢&#39;);"><label for="data_grid_5_ctl02_RadioButton19">不喜欢                           </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">4
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                      <font class="hongzi">取报取奶                                                                                                                                                                                                    </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_5_ctl03_RadioButton17" type="radio" name="data_grid_5$ctl03$test_groud" value="RadioButton17" onclick="font_show(&#39;a&#39;,469,&#39;独自会做2种&#39;);"><label for="data_grid_5_ctl03_RadioButton17">独自会做2种                        </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_5_ctl03_RadioButton18" type="radio" name="data_grid_5$ctl03$test_groud" value="RadioButton18" onclick="font_show(&#39;b&#39;,469,&#39;独自会做1种&#39;);"><label for="data_grid_5_ctl03_RadioButton18">独自会做1种                        </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_5_ctl03_RadioButton19" type="radio" name="data_grid_5$ctl03$test_groud" value="RadioButton19" onclick="font_show(&#39;c&#39;,469,&#39;大人监护下敢做&#39;);"><label for="data_grid_5_ctl03_RadioButton19">大人监护下敢做                       </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+
+                </tbody></table>
+                                </td>
+		</tr><tr>
+			<td>
+                                   <table style="width: 100%;" class="border" bgcolor="white" cellpadding="1" cellspacing="1">
+                <tbody><tr>
+                    <td bgcolor="#FFDEAD" class="font_class" align="center" width="4%">5
+                        </td>
+                    <td bgcolor="#FFDEAD" class="font_class" align="left" width="96%" style="height:20px;" colspan="2">
+                       
+                      <font class="hongzi">一网不捞鱼游戏时                                                                                                                                                                                                </font></td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="center" width="4%" rowspan="3">
+                      </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                        &nbsp;A&nbsp;
+                        <input id="data_grid_5_ctl04_RadioButton17" type="radio" name="data_grid_5$ctl04$test_groud" value="RadioButton17" onclick="font_show(&#39;a&#39;,468,&#39;守规则&#39;);"><label for="data_grid_5_ctl04_RadioButton17">守规则                           </label></td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                         &nbsp;B&nbsp;
+                         <input id="data_grid_5_ctl04_RadioButton18" type="radio" name="data_grid_5$ctl04$test_groud" value="RadioButton18" onclick="font_show(&#39;b&#39;,468,&#39;B争着入网&#39;);"><label for="data_grid_5_ctl04_RadioButton18">B争着入网                         </label>
+                        </td>
+                </tr>
+                
+                <tr>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%" style="height:20px;">
+                       &nbsp;C&nbsp;
+                       <input id="data_grid_5_ctl04_RadioButton19" type="radio" name="data_grid_5$ctl04$test_groud" value="RadioButton19" onclick="font_show(&#39;c&#39;,468,&#39;不入队或随大流&#39;);"><label for="data_grid_5_ctl04_RadioButton19">不入队或随大流                       </label>
+                       </td>
+                    <td bgcolor="#FFEFD5" class="font_class" align="left" width="48%">
+                        
+                         </td>
+                </tr>
+
+                </tbody></table>
+                                </td>
+		</tr>
+	</tbody></table></span></td></tr>
+                 
+                 <tr><td align="center"><div id="No5">
+		<input type="image" name="check_bt" id="check_bt" src="./jieguo_show.gif" style="border-width:0px;">
+	</div></td></tr>
+                 </tbody></table></li>
+
+       
+                 </ul>
+                
+          </div>
+           
+        </td>
+    </tr>
+    
+</tbody></table></div>
+
+         
+    </div>
+</div>
+
+</div>
+ 
+
+</td>
+                <td valign="top" width="300">
+                
+                <div id="doudong" style="position:relative">
+                <table cellpadding="0" cellspacing="0"><tbody><tr><td><img src="./zhuanjia.JPG"></td></tr></tbody></table>
+                    <table style="width:100%;" class="border_1">
+                        <tbody><tr>
+                            <td bgcolor="#FFDEAD" width="100%" align="left">
+                               <div id="font_show"></div></td>
+                        </tr>
+                        </tbody></table></div>
+                            <table style="width:100%;height:490px">
+                                <tbody><tr>
+                                    <td align="center" valign="top" style="height:490px">
+                                      <table width="200" border="0">
+  <tbody><tr>
+    <td width="6">&nbsp;</td>
+    <td colspan="2"><img src="./cepin_lieft.gif" width="238" style="height:224px;" border="0" usemap="#Map"></td>
+    <td width="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td width="22" rowspan="5">&nbsp;</td>
+    <td width="212" align="left"><a href="http://www.cn0-6.com/zl_test/1.html#aa" class="font_right">1.什么叫智力测评</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="left"><a href="http://www.cn0-6.com/zl_test/1.html#bb" class="font_right">2.如何进行智力测评</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="left"><a href="http://www.cn0-6.com/zl_test/1.html#cc" class="font_right">3.如何管理和查看智力测评结果</a></td>
+    <td>&nbsp;</td>
+  </tr>
+ 
+  <tr>
+    <td>&nbsp;</td>
+    <td align="left"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2" align="center"><img src="./shipuright_05.gif" width="191" style="height:135px;"></td>
+    <td>&nbsp;</td>
+  </tr>
+</tbody></table></td>
+                                </tr>
+                            </tbody></table>
+                        
+</td>
+            </tr>
+            <tr>
+                <td>&nbsp;
+                    </td>
+                <td>
+                    </td>
+                <td>&nbsp;
+                    </td>
+            </tr>
+        </tbody></table>
+    
+        <table width="1006" align="center">
+            <tbody><tr>
+                <td>&nbsp;
+                    </td>
+
+            </tr>
+            
+        </tbody></table>
+    
+    </div>
+    </form>
+    <map name="Map" id="Map"><area shape="rect" coords="96,99,178,121" href="http://www.cn0-6.com/tizhongmanage.aspx">
+    <area shape="rect" coords="95,65,181,90" href="http://www.cn0-6.com/ceping.aspx">
+<area shape="rect" coords="95,65,181,90" href="http://www.cn0-6.com/zl_test/test_online.aspx#"><area shape="rect" coords="93,134,177,150" href="http://www.cn0-6.com/zl_test/test_online.aspx#"><area shape="rect" coords="96,161,142,188" href="http://www.cn0-6.com/zl_test/1.html">
+    </map>
+    </center>
+
+
+
+  <script type="text/javascript">
+<!--
+       
+var tablink_idname = new Array("tablink")
+var tabcontent_idname = new Array("tabcontent") 
+var tabcount = new Array("5")
+var loadtabs = new Array("1")  
+var autochangemenu = 1;
+var changespeed = 1;//此处为突出效果而将速度调快，可以改为10左右。
+var stoponhover = 0;
+function easytabs(menunr, active)
+{
+if (menunr == autochangemenu)
+{currenttab=active;}
+if
+((menunr == autochangemenu)&&(stoponhover==1))
+{stop_autochange()}
+else if
+((menunr == autochangemenu)&&(stoponhover==0))
+{counter=0;}menunr = menunr-1;for (i=1; i <= tabcount[menunr]; i++)
+{
+document.getElementById(tablink_idname[menunr]+i).className='tab'+i;
+document.getElementById(tabcontent_idname[menunr]+i).style.display = 'none';}
+document.getElementById(tablink_idname[menunr]+active).className='tabactive';
+document.getElementById(tabcontent_idname[menunr]+active).style.display = 'block';}
+var timer; counter=0; 
+var totaltabs=tabcount[autochangemenu-1];
+var currenttab=loadtabs[autochangemenu-1];
+function start_autochange()
+{counter=counter+1;//timer=setTimeout("start_autochange()",1000);
+if (counter == changespeed+1) {
+currenttab++;
+if
+(currenttab>totaltabs) {currenttab=1}
+easytabs(autochangemenu,currenttab);restart_autochange();}
+}
+function restart_autochange
+(){clearTimeout(timer);counter=0;start_autochange();}
+function stop_autochange(){clearTimeout(timer);counter=0;}
+window.onload=function(){
+var menucount=loadtabs.length; var a = 0; var b = 1; do {easytabs(b, loadtabs[a]);  a++; b++;}while (b<=menucount);
+if (autochangemenu!=0){start_autochange();}
+}
+//-->
+
+</script><div style="position: absolute; z-index: 19700; top: -1970px; left: -1970px;"><iframe src="./My97DatePicker.html" frameborder="0" border="0" scrolling="no" style="width: 186px; height: 199px;"></iframe></div></body></html>
